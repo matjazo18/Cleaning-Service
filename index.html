@@ -1,0 +1,1483 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CleanLine Ljubljana — Profesionalna čistoča za pisarne, apartmaje in domove</title>
+<meta name="description" content="CleanLine Ljubljana — premium čistilni servis za pisarne, apartmaje in stanovanja v Ljubljani in okolici. Zanesljivo, diskretno, profesionalno." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet" />
+<style>
+/* =========================================================
+   CleanLine Ljubljana — design tokens & global styles
+   ========================================================= */
+:root{
+  /* Brand */
+  --navy-900:#0B1433;
+  --navy-800:#101D4A;
+  --navy-700:#172658;
+  --cyan-500:#39D6E8;
+  --cyan-600:#1FBFD2;
+  --aqua-200:#7CEEF2;
+  --aqua-100:#E6FAFB;
+  --gold-500:#C5A15A;
+  --gold-600:#A8854A;
+
+  --ink-900:#0B1433;
+  --ink-700:#2A3357;
+  --ink-500:#5A6385;
+  --ink-400:#8089A6;
+  --ink-300:#B8BED1;
+  --bg:#F7F8FA;
+  --bg-2:#EEF1F6;
+  --line:#E3E7EE;
+  --line-dark:rgba(255,255,255,0.10);
+
+  --radius-sm:8px;
+  --radius:14px;
+  --radius-lg:22px;
+  --radius-xl:32px;
+
+  --shadow-soft: 0 1px 2px rgba(11,20,51,.04), 0 8px 24px rgba(11,20,51,.06);
+  --shadow-pop:  0 4px 8px rgba(11,20,51,.06), 0 24px 48px rgba(11,20,51,.10);
+
+  --container: 1240px;
+
+  --ff-sans:"Manrope","Helvetica Neue",system-ui,sans-serif;
+  --ff-serif:"Fraunces",Georgia,serif;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family:var(--ff-sans);
+  font-weight:400;
+  color:var(--ink-900);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  line-height:1.55;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; cursor:pointer; }
+
+.container{ width:100%; max-width:var(--container); margin:0 auto; padding:0 28px; }
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:15px;
+  letter-spacing:-0.005em;
+  border:1px solid transparent;
+  transition: transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease, box-shadow .25s ease;
+  white-space:nowrap;
+}
+.btn--lg{ padding:18px 28px; font-size:16px; }
+.btn--sm{ padding:10px 16px; font-size:14px; }
+
+.btn--primary{
+  background:var(--cyan-500); color:var(--navy-900);
+  box-shadow: 0 1px 0 rgba(255,255,255,.5) inset, 0 8px 20px rgba(57,214,232,.30);
+}
+.btn--primary:hover{ background:var(--aqua-200); transform:translateY(-1px); box-shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 14px 28px rgba(57,214,232,.36); }
+
+.btn--ghost{
+  background:transparent; color:#fff; border-color:rgba(255,255,255,.25);
+}
+.btn--ghost:hover{ border-color:var(--cyan-500); color:var(--cyan-500); }
+
+.btn--dark{ background:var(--navy-900); color:#fff; }
+.btn--dark:hover{ background:var(--navy-800); }
+
+.link-cyan{
+  color:var(--cyan-600); font-weight:600;
+  border-bottom:1px solid transparent;
+  transition: border-color .15s ease, color .15s ease;
+}
+.link-cyan:hover{ border-color:var(--cyan-600); }
+
+/* =========================================================
+   Section heads
+   ========================================================= */
+.section-eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:12px; font-weight:600;
+  letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--gold-500);
+}
+.section-eyebrow::before{
+  content:""; width:24px; height:1px; background:var(--gold-500);
+}
+.section-title{
+  font-family:var(--ff-sans);
+  font-weight:700;
+  font-size: clamp(30px, 3.4vw, 48px);
+  line-height:1.1;
+  letter-spacing:-0.02em;
+  margin: 14px 0 14px;
+  max-width: 760px;
+  text-wrap: balance;
+}
+.section-title em{
+  font-family:var(--ff-serif);
+  font-style:italic; font-weight:500;
+  color:var(--ink-700);
+}
+.section-lede{
+  font-size:17px; color:var(--ink-500);
+  max-width:640px; margin:0;
+  text-wrap: pretty;
+}
+.section-head{ margin-bottom:48px; }
+
+/* =========================================================
+   NAV
+   ========================================================= */
+.nav{
+  position:sticky; top:0; z-index:50;
+  background: rgba(247,248,250,.82);
+  backdrop-filter: saturate(150%) blur(14px);
+  -webkit-backdrop-filter: saturate(150%) blur(14px);
+  border-bottom:1px solid rgba(11,20,51,.06);
+}
+.nav__inner{
+  width:100%; max-width:var(--container);
+  margin:0 auto; padding: 14px 28px;
+  display:flex; align-items:center; gap:32px;
+}
+.nav__brand img{ height:38px; width:auto; }
+.nav__links{
+  display:flex; gap:28px;
+  margin-left:auto;
+  font-size:14.5px; font-weight:500;
+  color:var(--ink-700);
+}
+.nav__links a{ position:relative; padding:6px 0; }
+.nav__links a:hover{ color:var(--navy-900); }
+.nav__links a::after{
+  content:""; position:absolute; left:0; right:100%; bottom:0;
+  height:2px; background:var(--cyan-500); transition:right .25s ease;
+}
+.nav__links a:hover::after{ right:0; }
+
+.nav__cta{ display:flex; align-items:center; gap:16px; }
+.nav__phone{
+  display:inline-flex; align-items:center; gap:8px;
+  font-weight:600; font-size:14.5px;
+  color:var(--navy-900);
+}
+.nav__phone:hover{ color:var(--cyan-600); }
+
+@media (max-width: 880px){
+  .nav__links{ display:none; }
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  position:relative; overflow:hidden;
+  background: linear-gradient(180deg, #0B1433 0%, #101D4A 70%, #0B1433 100%);
+  color:#fff;
+  padding: 84px 0 120px;
+}
+.hero__bg{ position:absolute; inset:0; pointer-events:none; }
+.hero__grid{ position:absolute; inset:0; width:100%; height:100%; opacity:.7; }
+.hero__glow{
+  position:absolute; border-radius:50%; filter:blur(80px); opacity:.35;
+}
+.hero__glow--1{ width:480px; height:480px; background:#39D6E8; left:-160px; top:-120px; }
+.hero__glow--2{ width:560px; height:560px; background:#7CEEF2; right:-200px; bottom:-180px; opacity:.18; }
+
+.hero__inner{
+  position:relative; z-index:1;
+  width:100%; max-width:var(--container);
+  margin:0 auto; padding: 0 28px;
+  display:grid; grid-template-columns: 1.05fr 0.95fr; gap:64px;
+  align-items:center;
+}
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:8px 14px;
+  background: rgba(124,238,242,0.08);
+  border:1px solid rgba(124,238,242,0.22);
+  border-radius:999px;
+  font-size:12.5px; font-weight:500;
+  color:var(--aqua-200);
+  letter-spacing:0.01em;
+}
+.eyebrow__dot{
+  width:7px; height:7px; border-radius:50%;
+  background:var(--cyan-500);
+  box-shadow: 0 0 0 4px rgba(57,214,232,.18);
+}
+
+.hero__title{
+  font-weight:700;
+  font-size: clamp(40px, 5.4vw, 72px);
+  line-height:1.02;
+  letter-spacing:-0.025em;
+  margin: 22px 0 22px;
+  text-wrap: balance;
+}
+.hero__title-accent{
+  font-family:var(--ff-serif);
+  font-style:italic;
+  font-weight:400;
+  color:var(--aqua-200);
+  letter-spacing:-0.02em;
+}
+
+.hero__sub{
+  font-size:18.5px; line-height:1.55;
+  color: #C8D1EC;
+  max-width: 560px; margin: 0 0 36px;
+  text-wrap: pretty;
+}
+
+.hero__ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:36px; }
+
+.hero__assurances{
+  list-style:none; margin:0; padding:24px 0 0;
+  border-top:1px solid rgba(255,255,255,0.10);
+  display:flex; flex-wrap:wrap; gap:22px 28px;
+  font-size:14px; color:#C8D1EC;
+}
+.hero__assurances li{ display:inline-flex; align-items:center; gap:8px; }
+
+/* Hero visual */
+.hero__visual{ position:relative; }
+.hero__photo{
+  position:relative;
+  aspect-ratio: 4/5;
+  width:100%;
+  border-radius: var(--radius-lg);
+  overflow:hidden;
+  background:
+    linear-gradient(135deg, rgba(124,238,242,0.10), rgba(57,214,232,0.04)),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 14px, rgba(255,255,255,0) 14px 28px),
+    #172658;
+  border:1px solid rgba(124,238,242,0.16);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,.35),
+    inset 0 0 0 1px rgba(255,255,255,.04);
+  display:flex; align-items:center; justify-content:center;
+}
+.photo-placeholder__label{
+  font-size:13px; letter-spacing:0.04em;
+  color: rgba(255,255,255,0.55);
+  padding: 10px 16px;
+  border:1px dashed rgba(124,238,242,0.35);
+  border-radius:999px;
+}
+.hero__photo-shine{
+  position:absolute; inset:0;
+  background: linear-gradient(115deg, transparent 40%, rgba(124,238,242,0.10) 50%, transparent 60%);
+}
+
+.hero__floatcard{
+  position:absolute;
+  background: rgba(255,255,255,0.96);
+  color:var(--ink-900);
+  border-radius: var(--radius);
+  padding:14px 18px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.25);
+  min-width: 180px;
+}
+.hero__floatcard--top{ top:24px; left:-28px; }
+.hero__floatcard--bot{ bottom:32px; right:-22px; }
+.hero__floatcard-num{ font-size:20px; font-weight:700; letter-spacing:-0.01em; }
+.hero__floatcard-num--sm{ font-size:14.5px; }
+.hero__floatcard-label{ font-size:12px; color:var(--ink-500); margin-top:2px; }
+.hero__stars{ display:flex; gap:2px; margin-top:6px; }
+.hero__floatcard-row{ display:flex; align-items:center; gap:12px; }
+
+.hero__pulse{
+  width:34px; height:34px; border-radius:50%;
+  background: rgba(57,214,232,0.16);
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+}
+.hero__pulse span{
+  width:10px; height:10px; border-radius:50%;
+  background: var(--cyan-500);
+  box-shadow: 0 0 0 0 rgba(57,214,232,.6);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse{
+  0%{ box-shadow: 0 0 0 0 rgba(57,214,232,.5); }
+  70%{ box-shadow: 0 0 0 12px rgba(57,214,232,0); }
+  100%{ box-shadow: 0 0 0 0 rgba(57,214,232,0); }
+}
+
+.hero__marquee{
+  position:absolute; left:0; right:0; bottom:0;
+  overflow:hidden;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: rgba(11,20,51,0.4);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.hero__marquee-track{
+  display:inline-flex; gap:28px; white-space:nowrap;
+  animation: marq 36s linear infinite;
+  font-size:13px; letter-spacing:0.16em; text-transform:uppercase;
+  color: rgba(255,255,255,0.45);
+}
+.hero__marquee-track .dot{ color: var(--gold-500); }
+@keyframes marq{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+
+@media (max-width: 980px){
+  .hero{ padding: 64px 0 120px; }
+  .hero__inner{ grid-template-columns:1fr; gap:48px; }
+  .hero__floatcard--top{ left: 12px; }
+  .hero__floatcard--bot{ right: 12px; }
+}
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+.services{ padding: 110px 0 110px; background: var(--bg); }
+.services__grid{
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+.svc{
+  grid-column: span 2;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px 26px 24px;
+  display:flex; flex-direction:column;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .35s ease;
+  position:relative;
+  min-height: 260px;
+}
+.svc:hover{
+  transform: translateY(-3px);
+  border-color: rgba(57,214,232,0.45);
+  background: linear-gradient(180deg, #fff 0%, var(--aqua-100) 130%);
+  box-shadow: var(--shadow-pop);
+}
+.svc--lg{
+  grid-column: span 3;
+  grid-row: span 2;
+  background: linear-gradient(180deg, #fff, #fff 60%, var(--aqua-100));
+}
+.svc--lg:hover{ background: linear-gradient(180deg, #fff, var(--aqua-100)); }
+
+.svc__icon{
+  width:52px; height:52px;
+  border-radius: 14px;
+  background: rgba(57,214,232,0.10);
+  color: var(--cyan-600);
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom: 18px;
+}
+.svc__icon svg{ width:28px; height:28px; }
+
+.svc__tag{
+  position:absolute; top:22px; right:22px;
+  font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+  color: var(--gold-500);
+  padding: 4px 10px;
+  border:1px solid rgba(197,161,90,0.4);
+  border-radius:999px;
+  background: rgba(197,161,90,0.06);
+}
+
+.svc__title{
+  font-size:22px; font-weight:700; letter-spacing:-0.015em;
+  margin: 0 0 8px;
+}
+.svc__desc{
+  font-size:15px; color:var(--ink-500);
+  margin:0 0 18px;
+  text-wrap: pretty;
+}
+.svc__bullets{
+  list-style:none; padding:0; margin:0 0 22px;
+  display:flex; flex-direction:column; gap:8px;
+  font-size:14.5px; color:var(--ink-700);
+}
+.svc__bullets li{ position:relative; padding-left:22px; }
+.svc__bullets li::before{
+  content:""; position:absolute; left:0; top:9px;
+  width:10px; height:10px; border-radius:3px;
+  background: var(--cyan-500);
+  box-shadow: 0 0 0 4px rgba(57,214,232,0.14);
+}
+.svc__link{
+  margin-top:auto;
+  font-size:14.5px; font-weight:600;
+  color: var(--cyan-600);
+  display:inline-flex; align-items:center; gap:6px;
+}
+.svc__link:hover{ color: var(--navy-900); }
+.svc__link span{ transition: transform .2s ease; }
+.svc__link:hover span{ transform: translateX(4px); }
+
+.services__foot{
+  margin-top: 36px;
+  padding: 22px 26px;
+  border:1px dashed var(--line);
+  border-radius: var(--radius);
+  background:#fff;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:24px;
+  color:var(--ink-500);
+  font-size:14.5px;
+}
+
+@media (max-width: 980px){
+  .services__grid{ grid-template-columns: repeat(2, 1fr); }
+  .svc, .svc--lg{ grid-column: span 1; grid-row: auto; min-height: 0; }
+}
+@media (max-width: 560px){
+  .services__grid{ grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   WHY — dark section
+   ========================================================= */
+.why{
+  position:relative; overflow:hidden;
+  background: linear-gradient(180deg, #0B1433 0%, #101D4A 100%);
+  color:#fff;
+  padding: 110px 0 110px;
+}
+.why__bg{ position:absolute; inset:0; pointer-events:none; }
+.why__container{ position:relative; z-index:1; }
+
+.section-head--dark .section-title{ color:#fff; }
+.section-head--dark .section-title em{ color: var(--aqua-200); }
+.section-lede--dark{ color: rgba(232,238,255,0.65); }
+
+.pillars{
+  display:grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  overflow:hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.pillar{
+  background: linear-gradient(180deg, rgba(23,38,88,0.6), rgba(11,20,51,0.3));
+  padding: 32px 28px 30px;
+  position:relative;
+}
+.pillar__num{
+  font-family: var(--ff-serif);
+  font-size: 14px; font-style:italic;
+  color: var(--gold-500);
+  letter-spacing: 0.05em;
+  margin-bottom: 22px;
+  position:relative;
+  display:inline-block;
+}
+.pillar__num::after{
+  content:""; display:block; width:36px; height:1px;
+  background: var(--gold-500); margin-top:6px;
+}
+.pillar__icon{
+  width:48px; height:48px;
+  display:flex; align-items:center; justify-content:center;
+  color: var(--cyan-500);
+  background: rgba(57,214,232,0.08);
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+.pillar__icon svg{ width:26px; height:26px; }
+.pillar__title{
+  font-size:21px; font-weight:700; letter-spacing:-0.01em;
+  margin:0 0 8px; color:#fff;
+}
+.pillar__desc{
+  font-size:14.5px; line-height:1.6;
+  color: rgba(232,238,255,0.68);
+  margin:0;
+}
+
+.why__guarantee{
+  margin-top: 36px;
+  display:flex; gap: 22px; align-items:center;
+  padding: 24px 28px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(197,161,90,0.12), rgba(197,161,90,0.04));
+  border:1px solid rgba(197,161,90,0.3);
+}
+.why__guarantee-seal{
+  width:64px; height:64px; flex:none;
+}
+.why__guarantee-label{
+  font-size:12px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase;
+  color: var(--gold-500);
+  margin-bottom:6px;
+}
+.why__guarantee-text{
+  margin:0; color: rgba(232,238,255,0.85); font-size:15px;
+}
+
+@media (max-width: 980px){
+  .pillars{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px){
+  .pillars{ grid-template-columns: 1fr; }
+  .why__guarantee{ flex-direction:column; align-items:flex-start; }
+}
+
+/* =========================================================
+   PROCESS — timeline
+   ========================================================= */
+.process{ padding: 110px 0; background: var(--bg); }
+.steps{
+  list-style:none; margin:0; padding:0;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  counter-reset: step;
+  position:relative;
+}
+.step{
+  position:relative;
+  background:#fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px 24px;
+}
+.step__num{
+  font-family: var(--ff-serif);
+  font-size: 44px;
+  font-weight: 400;
+  line-height:1;
+  color: var(--cyan-500);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  display:inline-block;
+}
+.step__title{
+  font-size:20px; font-weight:700; letter-spacing:-0.01em;
+  margin: 0 0 8px;
+}
+.step__desc{
+  font-size:14.5px; color: var(--ink-500); margin: 0 0 16px;
+  text-wrap: pretty;
+}
+.step__time{
+  display:inline-block;
+  font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+  color: var(--navy-900);
+  padding: 6px 10px;
+  background: var(--aqua-100);
+  border-radius: 999px;
+}
+.step__rail{
+  position:absolute;
+  top: 50px; right: -10px;
+  width: 20px; height: 2px;
+  background: var(--line);
+}
+.step__rail::after{
+  content:""; position:absolute; right:-2px; top:-3px;
+  width:8px; height:8px; border-top:2px solid var(--line); border-right:2px solid var(--line);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 980px){
+  .steps{ grid-template-columns: repeat(2, 1fr); }
+  .step__rail{ display:none; }
+}
+@media (max-width: 560px){
+  .steps{ grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   RESULTS / SOCIAL PROOF
+   ========================================================= */
+.results{ padding: 110px 0; background: var(--bg-2); }
+.results__layout{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  margin-bottom: 56px;
+}
+.ba{
+  background: var(--navy-900);
+  border-radius: var(--radius-lg);
+  overflow:hidden;
+  position:relative;
+  min-height: 520px;
+  display:flex; flex-direction:column;
+}
+.ba__label{
+  padding: 16px 22px;
+  font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase;
+  color: var(--gold-500);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(11,20,51,0.6);
+}
+.ba__label span{ color: rgba(255,255,255,0.5); font-weight:500; text-transform:none; letter-spacing:0; }
+.ba__split{
+  position:relative; flex:1;
+  display:grid; grid-template-columns: 1fr 1fr;
+}
+.ba__side{
+  position:relative;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding: 24px;
+  text-align:center;
+}
+.ba__side--before{
+  background:
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0 8px, rgba(255,255,255,0) 8px 16px),
+    #1A2451;
+}
+.ba__side--after{
+  background:
+    radial-gradient(circle at 50% 40%, rgba(124,238,242,0.20), transparent 60%),
+    linear-gradient(180deg, rgba(57,214,232,0.06), rgba(11,20,51,0));
+}
+.ba__chip{
+  position:absolute; top:18px; left:18px;
+  font-size:11px; font-weight:700; letter-spacing:0.16em;
+  padding: 5px 10px; border-radius: 999px;
+}
+.ba__chip--before{ background: rgba(255,255,255,0.10); color:#fff; }
+.ba__chip--after{ background: var(--cyan-500); color: var(--navy-900); right:18px; left:auto; }
+.ba__hint{
+  font-size:13px; color: rgba(255,255,255,0.55);
+  max-width: 200px; line-height:1.5;
+}
+.ba__divider{
+  position:absolute; top:0; bottom:0; left:50%; width:2px;
+  background: var(--cyan-500); transform: translateX(-1px);
+}
+.ba__handle{
+  position:absolute; top:50%; left:50%; transform: translate(-50%,-50%);
+  width:34px; height:34px; border-radius:50%;
+  background: var(--cyan-500); color: var(--navy-900);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 8px 24px rgba(57,214,232,0.4);
+}
+
+.quotes{ display:flex; flex-direction:column; gap:16px; }
+.quote{
+  margin:0;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px 26px 22px;
+  position:relative;
+}
+.quote__mark{
+  font-family: var(--ff-serif);
+  font-size:64px; line-height:0.5;
+  color: var(--cyan-500);
+  position:absolute; top:34px; right:24px;
+  opacity:0.5;
+}
+.quote blockquote{
+  margin:0 0 14px;
+  font-size:15.5px;
+  line-height:1.55;
+  color: var(--ink-900);
+  text-wrap: pretty;
+  max-width: 92%;
+}
+.quote figcaption{
+  display:flex; flex-direction:column; gap:2px;
+  font-size:13.5px; color: var(--ink-500);
+}
+.quote figcaption strong{ color: var(--ink-900); font-weight:600; font-size:14px; }
+
+.trust{
+  display:flex; align-items:center; justify-content:space-between;
+  gap: 16px;
+  padding: 28px 36px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+.trust__item{ display:flex; flex-direction:column; gap:4px; }
+.trust__num{
+  font-size: 32px; font-weight:700; letter-spacing:-0.02em;
+  color: var(--navy-900);
+}
+.trust__num span{
+  color: var(--cyan-600); font-weight: 600;
+  font-size: 18px;
+}
+.trust__lbl{
+  font-size:13px; color: var(--ink-500); letter-spacing:0.02em;
+}
+.trust__divider{
+  width:1px; height:36px; background: var(--line);
+}
+
+@media (max-width: 980px){
+  .results__layout{ grid-template-columns: 1fr; }
+  .ba{ min-height: 380px; }
+  .trust{ flex-wrap: wrap; gap: 24px; }
+  .trust__divider{ display:none; }
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq{ padding: 110px 0; background: var(--bg); }
+.faq__container{ max-width: 940px; }
+.faq__list{ display:flex; flex-direction:column; gap:12px; }
+
+.qa{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  overflow:hidden;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.qa[open]{
+  border-color: rgba(57,214,232,0.5);
+  box-shadow: var(--shadow-soft);
+}
+.qa summary{
+  list-style:none;
+  cursor:pointer;
+  padding: 22px 28px;
+  display:flex; align-items:center; justify-content:space-between;
+  gap: 24px;
+  font-weight:600;
+}
+.qa summary::-webkit-details-marker{ display:none; }
+.qa__q{ font-size:16.5px; letter-spacing:-0.005em; }
+.qa__icon{
+  position:relative;
+  width:28px; height:28px; flex:none;
+  border-radius: 50%;
+  background: var(--aqua-100);
+  transition: background .2s ease, transform .25s ease;
+}
+.qa__icon::before, .qa__icon::after{
+  content:""; position:absolute; top:50%; left:50%;
+  width:12px; height:2px; background: var(--cyan-600);
+  transform: translate(-50%,-50%); border-radius:2px;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.qa__icon::after{ transform: translate(-50%,-50%) rotate(90deg); }
+.qa[open] .qa__icon{ background: var(--cyan-500); transform: rotate(180deg); }
+.qa[open] .qa__icon::before{ background: var(--navy-900); }
+.qa[open] .qa__icon::after{ opacity:0; }
+
+.qa__a{
+  padding: 0 28px 24px;
+  color: var(--ink-500);
+  font-size:15.5px; line-height:1.65;
+}
+.qa__a p{ margin:0; max-width: 720px; }
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+.finalcta{
+  padding: 110px 0;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(124,238,242,0.16), transparent 50%),
+    linear-gradient(180deg, #101D4A 0%, #0B1433 100%);
+  color:#fff;
+  position:relative; overflow:hidden;
+}
+.finalcta__inner{
+  display:grid; grid-template-columns: 1fr 1.05fr; gap:64px;
+  align-items:center;
+}
+.finalcta__title{
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight:700; letter-spacing:-0.02em; line-height:1.05;
+  margin: 14px 0 18px;
+  text-wrap: balance;
+}
+.finalcta__title em{
+  font-family: var(--ff-serif); font-style:italic; font-weight:400;
+  color: var(--aqua-200);
+}
+.finalcta__sub{
+  font-size:17px; color: rgba(232,238,255,0.7);
+  margin:0; max-width: 460px;
+}
+
+.finalcta__form{
+  background:#fff;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display:grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  color: var(--ink-900);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+.field{ display:flex; flex-direction:column; gap:6px; }
+.field--full{ grid-column: 1 / -1; }
+.field span{ font-size:13px; font-weight:600; color: var(--ink-700); }
+.field input, .field textarea{
+  font: inherit;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--ink-900);
+  transition: border-color .15s ease, background .15s ease;
+}
+.field input:focus, .field textarea:focus{
+  outline:none; border-color: var(--cyan-500);
+  background:#fff;
+}
+.finalcta__form .btn{ grid-column: 1 / -1; justify-content:center; }
+.finalcta__or{
+  grid-column: 1 / -1;
+  text-align:center; font-size:12px; letter-spacing:0.16em; text-transform:uppercase;
+  color: var(--ink-400); position:relative;
+}
+.finalcta__or::before, .finalcta__or::after{
+  content:""; position:absolute; top:50%; width:38%; height:1px; background: var(--line);
+}
+.finalcta__or::before{ left:0; } .finalcta__or::after{ right:0; }
+
+.finalcta__phone{
+  grid-column: 1 / -1;
+  display:flex; align-items:center; justify-content:center; gap:14px;
+  padding: 14px;
+  border:1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--navy-900);
+  transition: border-color .15s ease, background .15s ease;
+}
+.finalcta__phone:hover{ border-color: var(--cyan-500); background: var(--aqua-100); }
+.finalcta__phone span{ display:flex; flex-direction:column; line-height:1.1; }
+.finalcta__phone small{ font-size:11.5px; color: var(--ink-500); letter-spacing:0.04em; text-transform:uppercase; }
+.finalcta__phone strong{ font-size:18px; font-weight:700; }
+
+@media (max-width: 980px){
+  .finalcta__inner{ grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer{
+  background: #070E26;
+  color: rgba(255,255,255,0.7);
+}
+.footer__inner{
+  display:grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding: 80px 28px 60px;
+}
+.footer__logo{ height:48px; width:auto; background:#fff; padding:8px 14px; border-radius:10px; }
+.footer__tag{
+  margin: 22px 0 22px; max-width: 320px;
+  font-size:14.5px; line-height:1.6;
+  color: rgba(255,255,255,0.55);
+}
+.footer__hours{
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 18px;
+  font-size: 13.5px;
+  display:flex; flex-direction:column; gap:4px;
+}
+.footer__hours-label{
+  font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase;
+  color: var(--gold-500); margin-bottom:8px;
+}
+
+.footer__col h4{
+  font-size:12px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase;
+  color:#fff; margin: 6px 0 22px;
+}
+.footer__col ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+.footer__col a{ color: rgba(255,255,255,0.65); font-size:14.5px; transition: color .15s ease; }
+.footer__col a:hover{ color: var(--cyan-500); }
+.footer__col li{ font-size:14.5px; }
+
+.footer__col--contact{ display:flex; flex-direction:column; gap:8px; }
+.footer__phone{
+  font-size:28px; font-weight:700; letter-spacing:-0.02em;
+  color:#fff; margin: 0 0 4px;
+}
+.footer__phone:hover{ color: var(--cyan-500); }
+.footer__mail{ font-size:15px; color: rgba(255,255,255,0.7); }
+.footer__mail:hover{ color: var(--cyan-500); }
+.footer__col address{
+  font-style:normal; font-size:14px; color: rgba(255,255,255,0.55);
+  margin: 14px 0;
+}
+.footer__cta{ margin-top: 10px; align-self:flex-start; }
+
+.footer__bottom{
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 22px 0;
+  background: rgba(0,0,0,0.2);
+}
+.footer__bottom-inner{
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:13px; color: rgba(255,255,255,0.45);
+  flex-wrap: wrap; gap: 12px;
+}
+.footer__legal{ display:flex; gap:22px; }
+.footer__legal a:hover{ color: var(--cyan-500); }
+
+@media (max-width: 980px){
+  .footer__inner{ grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+@media (max-width: 560px){
+  .footer__inner{ grid-template-columns: 1fr; }
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav__inner">
+    <a href="#" class="nav__brand" aria-label="CleanLine Ljubljana">
+      <img src="assets/cleanline-logo.png" alt="CleanLine Ljubljana" style="width: 60px; height: 60px" />
+    </a>
+    <nav class="nav__links" aria-label="Glavni meni">
+      <a href="#storitve">Storitve</a>
+      <a href="#zakaj">Zakaj CleanLine</a>
+      <a href="#postopek">Postopek</a>
+      <a href="#reference">Reference</a>
+      <a href="#faq">Vprašanja</a>
+    </nav>
+    <div class="nav__cta">
+      <a href="tel:+38640123456" class="nav__phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        040 123 456
+      </a>
+      <a href="#kontakt" class="btn btn--primary btn--sm">Brezplačna ponudba</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="hero__glow hero__glow--2"></div>
+    <svg class="hero__grid" aria-hidden="true"><defs><pattern id="g" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="rgba(124,238,242,0.06)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#g)"/></svg>
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <div class="eyebrow">
+        <span class="eyebrow__dot"></span>
+        <span>Ljubljana · Vrhunski čistilni servis </span>
+      </div>
+      <h1 class="hero__title">
+        Pisarne, apartmaji in domovi <br/>
+        <span class="hero__title-accent">v brezhibni čistoči</span>
+      </h1>
+      <p class="hero__sub">Za naročnike v Ljubljani, ki pričakujejo brezhibno čistočo, urejen videz prostorov in ekipo, ki dela tiho, natančno in vedno ob dogovorjenem času.</p>
+
+      <div class="hero__ctas">
+        <a href="tel:+38640123456" class="btn btn--primary btn--lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          Pokliči zdaj
+        </a>
+        <a href="#kontakt" class="btn btn--ghost btn--lg">
+          Pošlji povpraševanje
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <ul class="hero__assurances">
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#39D6E8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Fiksna cena pred izvedbo</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#39D6E8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Lastna ekipa, brez podizvajalcev</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#39D6E8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Zavarovana odgovornost</li>
+      </ul>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__photo" role="img" aria-label="Fotografija profesionalno očiščenega prostora">
+        <span class="photo-placeholder__label">Fotografija &middot; očiščena pisarna ali apartma v Ljubljani</span>
+        <div class="hero__photo-shine"></div>
+      </div>
+      <div class="hero__floatcard hero__floatcard--top">
+        <div class="hero__floatcard-num">4,9 / 5</div>
+        <div class="hero__floatcard-label">povprečna ocena strank</div>
+        <div class="hero__stars" aria-label="Ocena 4,9 od 5">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A15A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A15A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A15A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A15A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A15A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+      </div>
+      <div class="hero__floatcard hero__floatcard--bot">
+        <div class="hero__floatcard-row">
+          <div class="hero__pulse"><span></span></div>
+          <div>
+            <div class="hero__floatcard-num hero__floatcard-num--sm">Na voljo danes</div>
+            <div class="hero__floatcard-label">termin v 24–48 h</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__marquee" aria-hidden="true">
+    <div class="hero__marquee-track">
+      <span>Pisarniški kompleksi</span><span class="dot">·</span>
+      <span>Kratkoročni najem</span><span class="dot">·</span>
+      <span>Družinski domovi</span><span class="dot">·</span>
+      <span>Coworking prostori</span><span class="dot">·</span>
+      <span>Apartmaji v centru</span><span class="dot">·</span>
+      <span>Zasebne ordinacije</span><span class="dot">·</span>
+      <span>Pisarniški kompleksi</span><span class="dot">·</span>
+      <span>Kratkoročni najem</span><span class="dot">·</span>
+      <span>Družinski domovi</span><span class="dot">·</span>
+      <span>Coworking prostori</span><span class="dot">·</span>
+      <span>Apartmaji v centru</span><span class="dot">·</span>
+      <span>Zasebne ordinacije</span><span class="dot">·</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="storitve">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow">Storitve</span>
+      <h2 class="section-title">Eno podjetje. <em>Vsa čiščenja</em>, ki jih potrebujete.</h2>
+      <p class="section-lede">Od enkratnega generalnega čiščenja do tedenskega vzdrževanja pisarne — vsako storitev opravi naša stalna ekipa po preverjenem protokolu in s profesionalno opremo.</p>
+    </header>
+
+    <div class="services__grid">
+      <article class="svc svc--lg">
+        <div class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26h20M9 26V14l7-8 7 8v12"/><path d="M13 26v-6h6v6"/><circle cx="20" cy="10" r="0.8" fill="currentColor"/><circle cx="23" cy="14" r="0.6" fill="currentColor"/></svg>
+        </div>
+        <div class="svc__tag">Najbolj naročano</div>
+        <h3 class="svc__title">Generalno čiščenje</h3>
+        <p class="svc__desc">Temeljito enkratno čiščenje od stropa do tal — po selitvi, prenovi ali kadar prostor potrebuje popoln reset.</p>
+        <ul class="svc__bullets">
+          <li>Pomivanje oken in okvirjev</li>
+          <li>Razmaščevanje kuhinje in sanitarij</li>
+          <li>Globinsko sesanje in pranje tal</li>
+        </ul>
+        <a href="#kontakt" class="svc__link">Povprašaj za generalno <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="svc">
+        <div class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="11"/><path d="M16 8v8l5 3"/></svg>
+        </div>
+        <h3 class="svc__title">Redno vzdrževanje</h3>
+        <p class="svc__desc">Tedenski ali mesečni cikli z isto ekipo, ki pozna vaš prostor in vaše preference.</p>
+        <a href="#kontakt" class="svc__link">Sestavi urnik <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="svc">
+        <div class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="22" height="18" rx="1.5"/><path d="M5 13h22M11 7v18M11 17h4M11 21h4M19 17h4M19 21h4"/></svg>
+        </div>
+        <h3 class="svc__title">Čiščenje pisarn</h3>
+        <p class="svc__desc">Diskretna izvedba pred ali po delovnem času — pisarne, sejne sobe, kuhinjski koti, sanitarije.</p>
+        <a href="#kontakt" class="svc__link">Pridobi ponudbo <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="svc">
+        <div class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14l10-8 10 8v12H6z"/><path d="M13 26v-7h6v7"/><circle cx="22" cy="9" r="1.5"/><path d="M22 7v-2M22 13v-2M19 9h-2M25 9h2"/></svg>
+        </div>
+        <h3 class="svc__title">Čiščenje apartmajev</h3>
+        <p class="svc__desc">Hitro in zanesljivo med dvema gostoma — vključno z menjavo perila in postavitvijo prostora.</p>
+        <a href="#kontakt" class="svc__link">Za lastnike apartmajev <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="svc">
+        <div class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 27V11l11-6 11 6v16z"/><path d="M5 27h22"/><rect x="13" y="17" width="6" height="10"/><rect x="9" y="13" width="3" height="3"/><rect x="20" y="13" width="3" height="3"/></svg>
+        </div>
+        <h3 class="svc__title">Čiščenje stanovanj</h3>
+        <p class="svc__desc">Domovi vseh velikosti — redno, ob selitvi ali po obrtniških delih. S svojo opremo in sredstvi.</p>
+        <a href="#kontakt" class="svc__link">Naroči za dom <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+
+    <div class="services__foot">
+      <span>Iščete nekaj posebnega? Čistimo tudi po obrtniških delih, salone, ordinacije in skupne prostore večstanovanjskih hiš.</span>
+      <a href="#kontakt" class="link-cyan">Vprašaj za vašo situacijo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CLEANLINE ============ -->
+<section class="why" id="zakaj">
+  <div class="why__bg" aria-hidden="true">
+    <div class="hero__glow hero__glow--1" style="opacity:.18; top:auto; bottom:-200px; left:40%;"></div>
+  </div>
+  <div class="container why__container">
+    <header class="section-head section-head--dark">
+      <span class="section-eyebrow">Zakaj CleanLine</span>
+      <h2 class="section-title section-title--dark">Štirje razlogi, zaradi katerih nas stranke <em>obdržijo leta</em>.</h2>
+      <p class="section-lede section-lede--dark">Čiščenje je preprosto delo, dokler ga ne opravi nekdo, ki vam premakne stvari, pride pozno ali pusti vrata odklenjena. CleanLine gradi nasprotno izkušnjo.</p>
+    </header>
+
+    <div class="pillars">
+      <article class="pillar">
+        <div class="pillar__num">01</div>
+        <div class="pillar__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l11 4v8c0 7-4.8 12.3-11 14-6.2-1.7-11-7-11-14V7l11-4z"/><path d="M11 16l4 4 7-8"/></svg>
+        </div>
+        <h3 class="pillar__title">Zanesljivost</h3>
+        <p class="pillar__desc">Termin, ki ga obljubimo, je termin, na katerem smo. Če zamudimo več kot 10 minut, vam to delo gre na naš račun.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar__num">02</div>
+        <div class="pillar__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="14" width="20" height="14" rx="2"/><path d="M10 14V9a6 6 0 0 1 12 0v5"/><circle cx="16" cy="21" r="2"/></svg>
+        </div>
+        <h3 class="pillar__title">Diskretnost</h3>
+        <p class="pillar__desc">Ekipa podpiše pogodbo o zaupnosti. Vaš ključ, dokumenti in vaš prostor ostanejo tam, kjer ste jih pustili.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar__num">03</div>
+        <div class="pillar__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+        </div>
+        <h3 class="pillar__title">Profesionalnost</h3>
+        <p class="pillar__desc">Lastna oprema, profesionalna sredstva in jasen protokol po vsakem obisku. Brez improvizacije in brez izgovorov.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar__num">04</div>
+        <div class="pillar__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 29s10-8 10-16a10 10 0 1 0-20 0c0 8 10 16 10 16z"/><circle cx="16" cy="13" r="3.5"/></svg>
+        </div>
+        <h3 class="pillar__title">Lokalna prisotnost</h3>
+        <p class="pillar__desc">Smo iz Ljubljane in pokrivamo Ljubljano. To pomeni hitri odzivni časi in ekipa, ki pozna vaš okraj.</p>
+      </article>
+    </div>
+
+    <div class="why__guarantee">
+      <div class="why__guarantee-seal" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="28" stroke="#C5A15A" stroke-width="1.2"/>
+          <circle cx="32" cy="32" r="22" stroke="#C5A15A" stroke-width="0.6" stroke-dasharray="2 3"/>
+          <path d="M22 32l7 7 13-15" stroke="#C5A15A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="why__guarantee-label">Garancija zadovoljstva</div>
+        <p class="why__guarantee-text">Če v 24 urah po čiščenju nečesa niste zadovoljni, ekipa pride nazaj in popravi brezplačno. To pišemo v pogodbo, ne samo na spletno stran.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="postopek">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow">Postopek</span>
+      <h2 class="section-title">Štirje koraki od klica <em>do svetlečega prostora</em>.</h2>
+      <p class="section-lede">Brez papirne birokracije, brez ugibanja o ceni. Po prvem klicu veste točno, kaj dobite, kdaj in za koliko.</p>
+    </header>
+
+    <ol class="steps">
+      <li class="step">
+        <div class="step__rail" aria-hidden="true"></div>
+        <div class="step__num">01</div>
+        <h3 class="step__title">Povpraševanje</h3>
+        <p class="step__desc">Pokličete ali pošljete kratek opis prostora. V istem dnevu se vrnemo s prvo oceno in možnimi termini.</p>
+        <span class="step__time">Odziv v 4 urah</span>
+      </li>
+      <li class="step">
+        <div class="step__rail" aria-hidden="true"></div>
+        <div class="step__num">02</div>
+        <h3 class="step__title">Dogovor</h3>
+        <p class="step__desc">Pridemo na brezplačen ogled ali se dogovorimo na daljavo. Dobite fiksno ceno, obseg del in podpisano pogodbo.</p>
+        <span class="step__time">Fiksna cena, brez doplačil</span>
+      </li>
+      <li class="step">
+        <div class="step__rail" aria-hidden="true"></div>
+        <div class="step__num">03</div>
+        <h3 class="step__title">Izvedba</h3>
+        <p class="step__desc">Ista ekipa, ki ji boste vsakič odprli vrata. Pridemo s svojo opremo in sredstvi — vi se s tem ne ukvarjate.</p>
+        <span class="step__time">Točno na minuto</span>
+      </li>
+      <li class="step">
+        <div class="step__num">04</div>
+        <h3 class="step__title">Kontrola kakovosti</h3>
+        <p class="step__desc">Vodja preveri vsak prostor po kontrolnem listu. Če najde napako preden vi, jo ekipa popravi takoj.</p>
+        <span class="step__time">28-točkovni protokol</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ RESULTS / SOCIAL PROOF ============ -->
+<section class="results" id="reference">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow">Reference</span>
+      <h2 class="section-title">Prostori, ki jih čistimo. <em>Ljudje, ki nas priporočajo.</em></h2>
+    </header>
+
+    <div class="results__layout">
+      <div class="ba">
+        <div class="ba__label">Pred &amp; po &middot; <span>vstavite par fotografij — isti kot, ista ura dneva</span></div>
+        <div class="ba__split">
+          <div class="ba__side ba__side--before">
+            <span class="ba__chip ba__chip--before">PRED</span>
+            <span class="ba__hint">Fotografija prostora pred čiščenjem</span>
+          </div>
+          <div class="ba__side ba__side--after">
+            <span class="ba__chip ba__chip--after">PO</span>
+            <span class="ba__hint">Fotografija po izvedbi CleanLine</span>
+          </div>
+          <div class="ba__divider" aria-hidden="true">
+            <span class="ba__handle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-4 6 4 6M16 6l4 6-4 6"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="quotes">
+        <figure class="quote">
+          <div class="quote__mark" aria-hidden="true">“</div>
+          <blockquote>Apartma med Bežigradom in centrom čistijo med dvema gostoma. V dveh letih niti enega zamujenega termina, niti ene pritožbe gosta na čistočo.</blockquote>
+          <figcaption>
+            <strong>Maja P.</strong><span>Lastnica apartmaja, Bežigrad</span>
+          </figcaption>
+        </figure>
+        <figure class="quote">
+          <div class="quote__mark" aria-hidden="true">“</div>
+          <blockquote>Pisarno čistijo po delovnem času, ne da bi morali biti prisotni. Računi so urejeni, komunikacija jasna, ekipa vedno enaka.</blockquote>
+          <figcaption>
+            <strong>Aleš K.</strong><span>Vodja pisarne, BTC</span>
+          </figcaption>
+        </figure>
+        <figure class="quote">
+          <div class="quote__mark" aria-hidden="true">“</div>
+          <blockquote>Po prenovi stanovanja je bilo to edino podjetje, ki je dejansko očistilo gradbeni prah do konca. Brez ponovnega obhoda.</blockquote>
+          <figcaption>
+            <strong>Nina &amp; Žan</strong><span>Družinski dom, Šiška</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="trust">
+      <div class="trust__item">
+        <div class="trust__num">150<span>+</span></div>
+        <div class="trust__lbl">aktivnih strank</div>
+      </div>
+      <div class="trust__divider" aria-hidden="true"></div>
+      <div class="trust__item">
+        <div class="trust__num">4<span> leta</span></div>
+        <div class="trust__lbl">izkušenj v Ljubljani</div>
+      </div>
+      <div class="trust__divider" aria-hidden="true"></div>
+      <div class="trust__item">
+        <div class="trust__num">28<span>-točkovni</span></div>
+        <div class="trust__lbl">kontrolni protokol</div>
+      </div>
+      <div class="trust__divider" aria-hidden="true"></div>
+      <div class="trust__item">
+        <div class="trust__num">100<span>%</span></div>
+        <div class="trust__lbl">Ljubljana in okolica</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container faq__container">
+    <header class="section-head">
+      <span class="section-eyebrow">Pogosta vprašanja</span>
+      <h2 class="section-title">Vprašanja, ki nam jih <em>postavijo prvi dan</em>.</h2>
+    </header>
+
+    <div class="faq__list">
+      <details class="qa" open>
+        <summary>
+          <span class="qa__q">Kako oblikujete ceno in ali so možna kasnejša doplačila?</span>
+          <span class="qa__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="qa__a">
+          <p>Ceno postavimo na podlagi velikosti prostora, vrste čiščenja in pogostosti. Ko podpišete ponudbo, je cena fiksna — kasnejših doplačil za material, prevoz ali "nepričakovano stanje" pri nas ni.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>
+          <span class="qa__q">Ali pridete tudi v večernih urah ali ob vikendih?</span>
+          <span class="qa__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="qa__a">
+          <p>Da. Pisarne pogosto čistimo med 18:00 in 22:00, apartmaje pa med 10:00 in 14:00 ob menjavi gostov. Ob sobotah delamo v rednem ritmu, nedelje rezerviramo za nujne primere.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>
+          <span class="qa__q">Ali uporabljate svoja čistila in opremo?</span>
+          <span class="qa__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="qa__a">
+          <p>Vedno. Pridemo s profesionalno opremo, eko-certificiranimi sredstvi in dovolj materiala za celoten obisk. Če imate alergijo na določeno sestavino ali raje delate brez parfumov, to vnesemo v vaš profil in se tega držimo.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>
+          <span class="qa__q">Kako ravnate s ključi in dostopom do prostora, ko nas ni doma?</span>
+          <span class="qa__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="qa__a">
+          <p>Ključ prevzamemo s podpisano predajno listino in ga hranimo v zaklenjeni omari z oznako brez naslova. Vsak prevzem in vračilo zabeležimo. Lahko uporabljamo tudi vaše šifrirne ključavnice ali kodirane omarice.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>
+          <span class="qa__q">Ali ste zavarovani za primer škode?</span>
+          <span class="qa__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="qa__a">
+          <p>Da. CleanLine ima sklenjeno zavarovanje splošne odgovornosti pri Zavarovalnici Triglav s kritjem do 100.000 €. V štirih letih dela smo prijavili dve manjši škodi — obe sta bili poravnani v sedmih dneh.</p>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary>
+          <span class="qa__q">Lahko dobim vedno isto ekipo, ki pozna moj prostor?</span>
+          <span class="qa__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="qa__a">
+          <p>Za redne stranke je to pravilo, ne izjema. Vaš prostor vodi en koordinator in ena primarna ekipa dveh ljudi. Če nekdo zboli, pride zamenjava, ki je predhodno seznanjena z vašim protokolom.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="finalcta" id="kontakt">
+  <div class="container finalcta__inner">
+    <div class="finalcta__text">
+      <span class="section-eyebrow">Naslednji korak</span>
+      <h2 class="finalcta__title">Pridobite <em>brezplačno ponudbo</em><br/> v istem dnevu.</h2>
+      <p class="finalcta__sub">Pošljite naslov in vrsto prostora — vrnemo se z okvirno ceno in prvimi termini. Brez obveznosti, brez prodajnih klicev.</p>
+    </div>
+    <form class="finalcta__form" onsubmit="event.preventDefault();">
+      <label class="field">
+        <span>Ime in priimek</span>
+        <input type="text" placeholder="Ana Novak" />
+      </label>
+      <label class="field">
+        <span>Telefon</span>
+        <input type="tel" placeholder="040 123 456" />
+      </label>
+      <label class="field field--full">
+        <span>Vrsta prostora &amp; kratek opis</span>
+        <textarea rows="3" placeholder="Npr. pisarna 120 m² v centru, redno tedensko čiščenje od septembra naprej."></textarea>
+      </label>
+      <button class="btn btn--primary btn--lg" type="submit">Pošlji povpraševanje</button>
+      <div class="finalcta__or">ali</div>
+      <a href="tel:+38640123456" class="finalcta__phone">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        <span>
+          <small>Pokličite direktno</small>
+          <strong>040 123 456</strong>
+        </span>
+      </a>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="assets/cleanline-logo.png" alt="CleanLine Ljubljana" class="footer__logo" />
+      <p class="footer__tag">Profesionalna čistoča za pisarne, apartmaje in domove v Ljubljani in okolici.</p>
+      <div class="footer__hours">
+        <div class="footer__hours-label">Delovni čas</div>
+        <div>Pon&ndash;Pet &nbsp;07:00&ndash;22:00</div>
+        <div>Sob &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;08:00&ndash;16:00</div>
+        <div>Ned &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nujni primeri</div>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Storitve</h4>
+      <ul>
+        <li><a href="#storitve">Generalno čiščenje</a></li>
+        <li><a href="#storitve">Redno vzdrževanje</a></li>
+        <li><a href="#storitve">Čiščenje pisarn</a></li>
+        <li><a href="#storitve">Čiščenje apartmajev</a></li>
+        <li><a href="#storitve">Čiščenje stanovanj</a></li>
+        <li><a href="#storitve">Po obrtniških delih</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Območje delovanja</h4>
+      <ul>
+        <li>Center &amp; Stara Ljubljana</li>
+        <li>Bežigrad &middot; Šiška</li>
+        <li>Vič &middot; Rudnik</li>
+        <li>Moste &middot; Polje</li>
+        <li>Trnovo &middot; Krakovo</li>
+        <li>BTC &middot; Črnuče</li>
+        <li>Domžale &middot; Medvode &middot; Vrhnika</li>
+      </ul>
+    </div>
+
+    <div class="footer__col footer__col--contact">
+      <h4>Kontakt</h4>
+      <a href="tel:+38640123456" class="footer__phone">040 123 456</a>
+      <a href="mailto:info@cleanline.si" class="footer__mail">info@cleanline.si</a>
+      <address>
+        CleanLine d.o.o.<br/>
+        Slovenska cesta 55<br/>
+        1000 Ljubljana
+      </address>
+      <a href="#kontakt" class="btn btn--primary footer__cta">Pridobite brezplačno ponudbo</a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span>© 2026 CleanLine d.o.o. &middot; Vse pravice pridržane</span>
+      <span class="footer__legal">
+        <a href="#">Politika zasebnosti</a>
+        <a href="#">Splošni pogoji</a>
+        <a href="#">Piškotki</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
