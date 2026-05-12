@@ -176,13 +176,15 @@ button{ font:inherit; cursor:pointer; }
 }
 .nav__phone:hover{ color:var(--cyan-600); }
 
+.nav__cta-mobile{ display:none; }
+
 @media (max-width: 880px){
   .nav__links{ display:none; }
   .nav__phone{ display:none; }
   .nav__cta .btn--primary:not(.nav__cta-mobile){ display:none; }
   .nav__cta-mobile{ display:inline-flex; }
+  .nav__cta{ margin-left:auto; }
 }
-.nav__cta-mobile{ display:none; }
 
 /* =========================================================
    HERO
