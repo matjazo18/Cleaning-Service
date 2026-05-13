@@ -49,6 +49,7 @@
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
 html,body{ margin:0; padding:0; }
 body{
   font-family:var(--ff-sans);
@@ -886,6 +887,13 @@ button{ font:inherit; cursor:pointer; }
 @media (max-width: 980px){
   .finalcta__inner{ grid-template-columns: 1fr; }
 }
+@media (max-width: 560px){
+  .hero{ padding: 48px 0 90px; }
+  .hero__ctas{ flex-direction: column; }
+  .hero__ctas .btn{ width: 100%; justify-content: center; }
+  .finalcta{ padding: 64px 0; }
+  .finalcta__form{ padding: 20px; grid-template-columns: 1fr; }
+}
 
 /* =========================================================
    FOOTER
@@ -979,12 +987,11 @@ button{ font:inherit; cursor:pointer; }
       <a href="#faq">Vprašanja</a>
     </nav>
     <div class="nav__cta">
-      <a href="tel:+38640123456" class="nav__phone">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
-        040 123 456
+      <a href="tel:+38630254747" class="btn btn--primary  ">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        Pokličite nas
       </a>
-      <a href="#kontakt" class="btn btn--primary btn--sm">Brezplačna ponudba</a>
-      <a href="tel:+38640123456" class="btn btn--primary btn--sm nav__cta-mobile">
+      <a href="tel:+38630254747" class="btn btn--primary  nav__cta-mobile">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
         Pokličite nas
       </a>
@@ -1013,7 +1020,7 @@ button{ font:inherit; cursor:pointer; }
       <p class="hero__sub">Za naročnike v Ljubljani, ki pričakujejo brezhibno čistočo, urejen videz prostorov in ekipo, ki dela tiho, natančno in vedno ob dogovorjenem času.</p>
 
       <div class="hero__ctas">
-        <a href="tel:+38640123456" class="btn btn--primary btn--lg">
+        <a href="tel:+38630254747" class="btn btn--primary btn--lg">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
           Pokliči zdaj
         </a>
@@ -1246,7 +1253,6 @@ button{ font:inherit; cursor:pointer; }
         <div class="step__num">04</div>
         <h3 class="step__title">Kontrola kakovosti</h3>
         <p class="step__desc">Vodja preveri vsak prostor po kontrolnem listu. Če najde napako preden vi, jo ekipa popravi takoj.</p>
-        <span class="step__time">28-točkovni protokol</span>
       </li>
     </ol>
   </div>
@@ -1314,11 +1320,6 @@ button{ font:inherit; cursor:pointer; }
       <div class="trust__item">
         <div class="trust__num">4<span> leta</span></div>
         <div class="trust__lbl">izkušenj v Ljubljani</div>
-      </div>
-      <div class="trust__divider" aria-hidden="true"></div>
-      <div class="trust__item">
-        <div class="trust__num">28<span>-točkovni</span></div>
-        <div class="trust__lbl">kontrolni protokol</div>
       </div>
       <div class="trust__divider" aria-hidden="true"></div>
       <div class="trust__item">
@@ -1409,26 +1410,22 @@ button{ font:inherit; cursor:pointer; }
       <h2 class="finalcta__title">Pridobite <em>brezplačno ponudbo</em><br/> v istem dnevu.</h2>
       <p class="finalcta__sub">Pošljite naslov in vrsto prostora — vrnemo se z okvirno ceno in prvimi termini. Brez obveznosti, brez prodajnih klicev.</p>
     </div>
-    <form class="finalcta__form" onsubmit="event.preventDefault();">
-      <label class="field">
-        <span>Ime in priimek</span>
-        <input type="text" placeholder="Ana Novak" />
-      </label>
-      <label class="field">
-        <span>Telefon</span>
-        <input type="tel" placeholder="040 123 456" />
+    <form class="finalcta__form" id="contact-form">
+      <label class="field field--full">
+        <span>Zadeva</span>
+        <input type="text" name="subject" placeholder="Povpraševanje za čiščenje pisarne" required />
       </label>
       <label class="field field--full">
-        <span>Vrsta prostora &amp; kratek opis</span>
-        <textarea rows="3" placeholder="Npr. pisarna 120 m² v centru, redno tedensko čiščenje od septembra naprej."></textarea>
+        <span>Vsebina</span>
+        <textarea rows="5" name="message" placeholder="Opišite prostor, vrsto čiščenja in kdaj bi potrebovali storitev..." required></textarea>
       </label>
       <button class="btn btn--primary btn--lg" type="submit">Pošlji povpraševanje</button>
       <div class="finalcta__or">ali</div>
-      <a href="tel:+38640123456" class="finalcta__phone">
+      <a href="tel:+38630254747" class="finalcta__phone">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
         <span>
           <small>Pokličite direktno</small>
-          <strong>040 123 456</strong>
+          <strong>030 254 747</strong>
         </span>
       </a>
     </form>
@@ -1476,20 +1473,19 @@ button{ font:inherit; cursor:pointer; }
 
     <div class="footer__col footer__col--contact">
       <h4>Kontakt</h4>
-      <a href="tel:+38640123456" class="footer__phone">040 123 456</a>
-      <a href="mailto:info@cleanline.si" class="footer__mail">info@cleanline.si</a>
+      <a href="tel:+38630254747" class="footer__phone">030 254 747</a>
+      <a href="mailto:cleanlineljubljana@gmail.com" class="footer__mail">cleanlineljubljana@gmail.com</a>
       <address>
-        CleanLine d.o.o.<br/>
-        Slovenska cesta 55<br/>
+        CleanLine Ljubljana<br/>
+        Kermaunerjeva ulica 13<br/>
         1000 Ljubljana
       </address>
-      <a href="#kontakt" class="btn btn--primary footer__cta">Pridobite brezplačno ponudbo</a>
     </div>
   </div>
 
   <div class="footer__bottom">
     <div class="container footer__bottom-inner">
-      <span>© 2026 CleanLine d.o.o. &middot; Vse pravice pridržane</span>
+      <span>© 2026 CleanLine Ljubljana &middot; Vse pravice pridržane</span>
       <span class="footer__legal">
         <a href="#">Politika zasebnosti</a>
         <a href="#">Splošni pogoji</a>
@@ -1499,5 +1495,51 @@ button{ font:inherit; cursor:pointer; }
   </div>
 </footer>
 
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var subject = this.querySelector('[name=subject]').value.trim();
+  var message = this.querySelector('[name=message]').value.trim();
+  window.location.href = 'mailto:cleanlineljubljana@gmail.com'
+    + '?subject=' + encodeURIComponent(subject)
+    + '&body='    + encodeURIComponent(message);
+});
+
+// FAQ smooth open/close
+document.querySelectorAll('.qa').forEach(function(details) {
+  var summary = details.querySelector('summary');
+  var content = details.querySelector('.qa__a');
+
+  summary.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    if (details.open) {
+      content.style.overflow = 'hidden';
+      content.style.height = content.scrollHeight + 'px';
+      requestAnimationFrame(function() {
+        content.style.transition = 'height .32s ease-out';
+        content.style.height = '0px';
+      });
+      content.addEventListener('transitionend', function() {
+        details.removeAttribute('open');
+        content.style.cssText = '';
+      }, { once: true });
+    } else {
+      details.setAttribute('open', '');
+      content.style.overflow = 'hidden';
+      content.style.height = '0px';
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          content.style.transition = 'height .32s ease-out';
+          content.style.height = content.scrollHeight + 'px';
+        });
+      });
+      content.addEventListener('transitionend', function() {
+        content.style.cssText = '';
+      }, { once: true });
+    }
+  });
+});
+</script>
 </body>
 </html>

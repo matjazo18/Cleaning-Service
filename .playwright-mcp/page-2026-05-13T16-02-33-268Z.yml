@@ -1,0 +1,377 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "CleanLine Ljubljana" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - img "CleanLine Ljubljana" [ref=e5]
+      - navigation "Glavni meni" [ref=e6]:
+        - link "Storitve" [ref=e7] [cursor=pointer]:
+          - /url: "#storitve"
+        - link "Zakaj CleanLine" [ref=e8] [cursor=pointer]:
+          - /url: "#zakaj"
+        - link "Postopek" [ref=e9] [cursor=pointer]:
+          - /url: "#postopek"
+        - link "Reference" [ref=e10] [cursor=pointer]:
+          - /url: "#reference"
+        - link "Vprašanja" [ref=e11] [cursor=pointer]:
+          - /url: "#faq"
+      - generic [ref=e12]:
+        - link "040 123 456" [ref=e13] [cursor=pointer]:
+          - /url: tel:+38640123456
+          - img [ref=e14]
+          - text: 040 123 456
+        - link "Brezplačna ponudba" [ref=e16] [cursor=pointer]:
+          - /url: "#kontakt"
+  - generic [ref=e17]:
+    - generic:
+      - img
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e22]: Ljubljana · Vrhunski čistilni servis
+        - heading "Pisarne, apartmaji in domovi v brezhibni čistoči" [level=1] [ref=e23]:
+          - text: Pisarne, apartmaji in domovi
+          - text: v brezhibni čistoči
+        - paragraph [ref=e24]: Za naročnike v Ljubljani, ki pričakujejo brezhibno čistočo, urejen videz prostorov in ekipo, ki dela tiho, natančno in vedno ob dogovorjenem času.
+        - generic [ref=e25]:
+          - link "Pokliči zdaj" [ref=e26] [cursor=pointer]:
+            - /url: tel:+38640123456
+            - img [ref=e27]
+            - text: Pokliči zdaj
+          - link "Pošlji povpraševanje" [ref=e29] [cursor=pointer]:
+            - /url: "#kontakt"
+            - text: Pošlji povpraševanje
+            - img [ref=e30]
+        - list [ref=e32]:
+          - listitem [ref=e33]:
+            - img [ref=e34]
+            - text: Fiksna cena pred izvedbo
+          - listitem [ref=e36]:
+            - img [ref=e37]
+            - text: Lastna ekipa, brez podizvajalcev
+          - listitem [ref=e39]:
+            - img [ref=e40]
+            - text: Zavarovana odgovornost
+      - generic [ref=e42]:
+        - img "Fotografija profesionalno očiščenega prostora" [ref=e43]:
+          - img "Profesionalno očiščena pisarna" [ref=e44]
+        - generic [ref=e46]:
+          - generic [ref=e47]: 4,9 / 5
+          - generic [ref=e48]: povprečna ocena strank
+          - generic "Ocena 4,9 od 5" [ref=e49]:
+            - img [ref=e50]
+            - img [ref=e52]
+            - img [ref=e54]
+            - img [ref=e56]
+            - img [ref=e58]
+        - generic [ref=e64]:
+          - generic [ref=e65]: Na voljo danes
+          - generic [ref=e66]: termin v 24–48 h
+    - generic [ref=e68]:
+      - generic [ref=e69]: Pisarniški kompleksi
+      - generic [ref=e70]: ·
+      - generic [ref=e71]: Kratkoročni najem
+      - generic [ref=e72]: ·
+      - generic [ref=e73]: Družinski domovi
+      - generic [ref=e74]: ·
+      - generic [ref=e75]: Coworking prostori
+      - generic [ref=e76]: ·
+      - generic [ref=e77]: Apartmaji v centru
+      - generic [ref=e78]: ·
+      - generic [ref=e79]: Zasebne ordinacije
+      - generic [ref=e80]: ·
+      - generic [ref=e81]: Pisarniški kompleksi
+      - generic [ref=e82]: ·
+      - generic [ref=e83]: Kratkoročni najem
+      - generic [ref=e84]: ·
+      - generic [ref=e85]: Družinski domovi
+      - generic [ref=e86]: ·
+      - generic [ref=e87]: Coworking prostori
+      - generic [ref=e88]: ·
+      - generic [ref=e89]: Apartmaji v centru
+      - generic [ref=e90]: ·
+      - generic [ref=e91]: Zasebne ordinacije
+      - generic [ref=e92]: ·
+  - generic [ref=e94]:
+    - generic [ref=e95]:
+      - generic [ref=e96]: Storitve
+      - heading "Eno podjetje. Vsa čiščenja, ki jih potrebujete." [level=2] [ref=e97]:
+        - text: Eno podjetje.
+        - emphasis [ref=e98]: Vsa čiščenja
+        - text: ", ki jih potrebujete."
+      - paragraph [ref=e99]: Od enkratnega generalnega čiščenja do tedenskega vzdrževanja pisarne — vsako storitev opravi naša stalna ekipa po preverjenem protokolu in s profesionalno opremo.
+    - generic [ref=e100]:
+      - article [ref=e101]:
+        - img [ref=e103]
+        - generic [ref=e108]: Najbolj naročano
+        - heading "Generalno čiščenje" [level=3] [ref=e109]
+        - paragraph [ref=e110]: Temeljito enkratno čiščenje od stropa do tal — po selitvi, prenovi ali kadar prostor potrebuje popoln reset.
+        - list [ref=e111]:
+          - listitem [ref=e112]: Pomivanje oken in okvirjev
+          - listitem [ref=e113]: Razmaščevanje kuhinje in sanitarij
+          - listitem [ref=e114]: Globinsko sesanje in pranje tal
+        - link "Povprašaj za generalno" [ref=e115] [cursor=pointer]:
+          - /url: "#kontakt"
+          - text: Povprašaj za generalno
+          - generic [ref=e116]: →
+      - article [ref=e117]:
+        - img [ref=e119]
+        - heading "Redno vzdrževanje" [level=3] [ref=e122]
+        - paragraph [ref=e123]: Tedenski ali mesečni cikli z isto ekipo, ki pozna vaš prostor in vaše preference.
+        - link "Sestavi urnik" [ref=e124] [cursor=pointer]:
+          - /url: "#kontakt"
+          - text: Sestavi urnik
+          - generic [ref=e125]: →
+      - article [ref=e126]:
+        - img [ref=e128]
+        - heading "Čiščenje pisarn" [level=3] [ref=e131]
+        - paragraph [ref=e132]: Diskretna izvedba pred ali po delovnem času — pisarne, sejne sobe, kuhinjski koti, sanitarije.
+        - link "Pridobi ponudbo" [ref=e133] [cursor=pointer]:
+          - /url: "#kontakt"
+          - text: Pridobi ponudbo
+          - generic [ref=e134]: →
+      - article [ref=e135]:
+        - img [ref=e137]
+        - heading "Čiščenje apartmajev" [level=3] [ref=e142]
+        - paragraph [ref=e143]: Hitro in zanesljivo med dvema gostoma — vključno z menjavo perila in postavitvijo prostora.
+        - link "Za lastnike apartmajev" [ref=e144] [cursor=pointer]:
+          - /url: "#kontakt"
+          - text: Za lastnike apartmajev
+          - generic [ref=e145]: →
+      - article [ref=e146]:
+        - img [ref=e148]
+        - heading "Čiščenje stanovanj" [level=3] [ref=e153]
+        - paragraph [ref=e154]: Domovi vseh velikosti — redno, ob selitvi ali po obrtniških delih. S svojo opremo in sredstvi.
+        - link "Naroči za dom" [ref=e155] [cursor=pointer]:
+          - /url: "#kontakt"
+          - text: Naroči za dom
+          - generic [ref=e156]: →
+    - generic [ref=e157]:
+      - generic [ref=e158]: Iščete nekaj posebnega? Čistimo tudi po obrtniških delih, salone, ordinacije in skupne prostore večstanovanjskih hiš.
+      - link "Vprašaj za vašo situacijo →" [ref=e159] [cursor=pointer]:
+        - /url: "#kontakt"
+  - generic [ref=e161]:
+    - generic [ref=e162]:
+      - generic [ref=e163]: Zakaj CleanLine
+      - heading "Štirje razlogi, zaradi katerih nas stranke obdržijo leta." [level=2] [ref=e164]:
+        - text: Štirje razlogi, zaradi katerih nas stranke
+        - emphasis [ref=e165]: obdržijo leta
+        - text: .
+      - paragraph [ref=e166]: Čiščenje je preprosto delo, dokler ga ne opravi nekdo, ki vam premakne stvari, pride pozno ali pusti vrata odklenjena. CleanLine gradi nasprotno izkušnjo.
+    - generic [ref=e167]:
+      - article [ref=e168]:
+        - generic [ref=e169]: "01"
+        - img [ref=e171]
+        - heading "Zanesljivost" [level=3] [ref=e174]
+        - paragraph [ref=e175]: Termin, ki ga obljubimo, je termin, na katerem smo. Če zamudimo več kot 10 minut, vam to delo gre na naš račun.
+      - article [ref=e176]:
+        - generic [ref=e177]: "02"
+        - img [ref=e179]
+        - heading "Diskretnost" [level=3] [ref=e183]
+        - paragraph [ref=e184]: Ekipa podpiše pogodbo o zaupnosti. Vaš ključ, dokumenti in vaš prostor ostanejo tam, kjer ste jih pustili.
+      - article [ref=e185]:
+        - generic [ref=e186]: "03"
+        - img [ref=e188]
+        - heading "Profesionalnost" [level=3] [ref=e190]
+        - paragraph [ref=e191]: Lastna oprema, profesionalna sredstva in jasen protokol po vsakem obisku. Brez improvizacije in brez izgovorov.
+      - article [ref=e192]:
+        - generic [ref=e193]: "04"
+        - img [ref=e195]
+        - heading "Lokalna prisotnost" [level=3] [ref=e198]
+        - paragraph [ref=e199]: Smo iz Ljubljane in pokrivamo Ljubljano. To pomeni hitri odzivni časi in ekipa, ki pozna vaš okraj.
+    - generic [ref=e200]:
+      - img [ref=e202]
+      - generic [ref=e206]:
+        - generic [ref=e207]: Garancija zadovoljstva
+        - paragraph [ref=e208]: Če v 24 urah po čiščenju nečesa niste zadovoljni, ekipa pride nazaj in popravi brezplačno. To pišemo v pogodbo, ne samo na spletno stran.
+  - generic [ref=e210]:
+    - generic [ref=e211]:
+      - generic [ref=e212]: Postopek
+      - heading "Štirje koraki od klica do svetlečega prostora." [level=2] [ref=e213]:
+        - text: Štirje koraki od klica
+        - emphasis [ref=e214]: do svetlečega prostora
+        - text: .
+      - paragraph [ref=e215]: Brez papirne birokracije, brez ugibanja o ceni. Po prvem klicu veste točno, kaj dobite, kdaj in za koliko.
+    - list [ref=e216]:
+      - listitem [ref=e217]:
+        - generic [ref=e219]: "01"
+        - heading "Povpraševanje" [level=3] [ref=e220]
+        - paragraph [ref=e221]: Pokličete ali pošljete kratek opis prostora. V istem dnevu se vrnemo s prvo oceno in možnimi termini.
+        - generic [ref=e222]: Odziv v 4 urah
+      - listitem [ref=e223]:
+        - generic [ref=e225]: "02"
+        - heading "Dogovor" [level=3] [ref=e226]
+        - paragraph [ref=e227]: Pridemo na brezplačen ogled ali se dogovorimo na daljavo. Dobite fiksno ceno, obseg del in podpisano pogodbo.
+        - generic [ref=e228]: Fiksna cena, brez doplačil
+      - listitem [ref=e229]:
+        - generic [ref=e231]: "03"
+        - heading "Izvedba" [level=3] [ref=e232]
+        - paragraph [ref=e233]: Ista ekipa, ki ji boste vsakič odprli vrata. Pridemo s svojo opremo in sredstvi — vi se s tem ne ukvarjate.
+        - generic [ref=e234]: Točno na minuto
+      - listitem [ref=e235]:
+        - generic [ref=e236]: "04"
+        - heading "Kontrola kakovosti" [level=3] [ref=e237]
+        - paragraph [ref=e238]: Vodja preveri vsak prostor po kontrolnem listu. Če najde napako preden vi, jo ekipa popravi takoj.
+  - generic [ref=e240]:
+    - generic [ref=e241]:
+      - generic [ref=e242]: Reference
+      - heading "Prostori, ki jih čistimo. Ljudje, ki nas priporočajo." [level=2] [ref=e243]:
+        - text: Prostori, ki jih čistimo.
+        - emphasis [ref=e244]: Ljudje, ki nas priporočajo.
+    - generic [ref=e245]:
+      - generic [ref=e246]:
+        - generic [ref=e247]: Pred & po · vstavite par fotografij — isti kot, ista ura dneva
+        - generic [ref=e248]:
+          - generic [ref=e249]:
+            - img "Pisarna pred čiščenjem" [ref=e250]
+            - generic [ref=e251]: PRED
+          - generic [ref=e252]:
+            - img "Pisarna po čiščenju CleanLine" [ref=e253]
+            - generic [ref=e254]: PO
+          - img [ref=e257]
+      - generic [ref=e259]:
+        - figure "Maja P. Lastnica apartmaja, Bežigrad" [ref=e260]:
+          - generic [ref=e261]: “
+          - blockquote [ref=e262]: Apartma med Bežigradom in centrom čistijo med dvema gostoma. V dveh letih niti enega zamujenega termina, niti ene pritožbe gosta na čistočo.
+          - generic [ref=e263]:
+            - strong [ref=e264]: Maja P.
+            - generic [ref=e265]: Lastnica apartmaja, Bežigrad
+        - figure "Aleš K. Vodja pisarne, BTC" [ref=e266]:
+          - generic [ref=e267]: “
+          - blockquote [ref=e268]: Pisarno čistijo po delovnem času, ne da bi morali biti prisotni. Računi so urejeni, komunikacija jasna, ekipa vedno enaka.
+          - generic [ref=e269]:
+            - strong [ref=e270]: Aleš K.
+            - generic [ref=e271]: Vodja pisarne, BTC
+        - figure "Nina & Žan Družinski dom, Šiška" [ref=e272]:
+          - generic [ref=e273]: “
+          - blockquote [ref=e274]: Po prenovi stanovanja je bilo to edino podjetje, ki je dejansko očistilo gradbeni prah do konca. Brez ponovnega obhoda.
+          - generic [ref=e275]:
+            - strong [ref=e276]: Nina & Žan
+            - generic [ref=e277]: Družinski dom, Šiška
+    - generic [ref=e278]:
+      - generic [ref=e279]:
+        - generic [ref=e280]: 150+
+        - generic [ref=e281]: aktivnih strank
+      - generic [ref=e283]:
+        - generic [ref=e284]: 4 leta
+        - generic [ref=e285]: izkušenj v Ljubljani
+      - generic [ref=e287]:
+        - generic [ref=e288]: 100%
+        - generic [ref=e289]: Ljubljana in okolica
+  - generic [ref=e291]:
+    - generic [ref=e292]:
+      - generic [ref=e293]: Pogosta vprašanja
+      - heading "Vprašanja, ki nam jih postavijo prvi dan." [level=2] [ref=e294]:
+        - text: Vprašanja, ki nam jih
+        - emphasis [ref=e295]: postavijo prvi dan
+        - text: .
+    - generic [ref=e296]:
+      - group [ref=e297]:
+        - generic "Kako oblikujete ceno in ali so možna kasnejša doplačila?" [ref=e298] [cursor=pointer]:
+          - generic [ref=e299]: Kako oblikujete ceno in ali so možna kasnejša doplačila?
+        - paragraph [ref=e302]: Ceno postavimo na podlagi velikosti prostora, vrste čiščenja in pogostosti. Ko podpišete ponudbo, je cena fiksna — kasnejših doplačil za material, prevoz ali "nepričakovano stanje" pri nas ni.
+      - group [ref=e303]:
+        - generic "Ali pridete tudi v večernih urah ali ob vikendih?" [ref=e304] [cursor=pointer]:
+          - generic [ref=e305]: Ali pridete tudi v večernih urah ali ob vikendih?
+      - group [ref=e307]:
+        - generic "Ali uporabljate svoja čistila in opremo?" [ref=e308] [cursor=pointer]:
+          - generic [ref=e309]: Ali uporabljate svoja čistila in opremo?
+      - group [ref=e311]:
+        - generic "Kako ravnate s ključi in dostopom do prostora, ko nas ni doma?" [ref=e312] [cursor=pointer]:
+          - generic [ref=e313]: Kako ravnate s ključi in dostopom do prostora, ko nas ni doma?
+      - group [ref=e315]:
+        - generic "Ali ste zavarovani za primer škode?" [ref=e316] [cursor=pointer]:
+          - generic [ref=e317]: Ali ste zavarovani za primer škode?
+      - group [ref=e319]:
+        - generic "Lahko dobim vedno isto ekipo, ki pozna moj prostor?" [ref=e320] [cursor=pointer]:
+          - generic [ref=e321]: Lahko dobim vedno isto ekipo, ki pozna moj prostor?
+  - generic [ref=e324]:
+    - generic [ref=e325]:
+      - generic [ref=e326]: Naslednji korak
+      - heading "Pridobite brezplačno ponudbo v istem dnevu." [level=2] [ref=e327]:
+        - text: Pridobite
+        - emphasis [ref=e328]: brezplačno ponudbo
+        - text: v istem dnevu.
+      - paragraph [ref=e329]: Pošljite naslov in vrsto prostora — vrnemo se z okvirno ceno in prvimi termini. Brez obveznosti, brez prodajnih klicev.
+    - generic [ref=e330]:
+      - generic [ref=e331]:
+        - generic [ref=e332]: Vaša e-pošta
+        - textbox "Vaša e-pošta" [ref=e333]:
+          - /placeholder: ana@gmail.com
+      - generic [ref=e334]:
+        - generic [ref=e335]: Zadeva
+        - textbox "Zadeva" [ref=e336]:
+          - /placeholder: Povpraševanje za čiščenje pisarne
+      - generic [ref=e337]:
+        - generic [ref=e338]: Vsebina
+        - textbox "Vsebina" [ref=e339]:
+          - /placeholder: Opišite prostor, vrsto čiščenja in kdaj bi potrebovali storitev...
+      - button "Pošlji povpraševanje" [ref=e340] [cursor=pointer]
+      - generic [ref=e341]: ali
+      - link "Pokličite direktno 040 123 456" [ref=e342] [cursor=pointer]:
+        - /url: tel:+38640123456
+        - img [ref=e343]
+        - generic [ref=e345]:
+          - generic [ref=e346]: Pokličite direktno
+          - strong [ref=e347]: 040 123 456
+  - contentinfo [ref=e348]:
+    - generic [ref=e349]:
+      - generic [ref=e350]:
+        - img "CleanLine Ljubljana" [ref=e351]
+        - paragraph [ref=e352]: Profesionalna čistoča za pisarne, apartmaje in domove v Ljubljani in okolici.
+        - generic [ref=e353]:
+          - generic [ref=e354]: Delovni čas
+          - generic [ref=e355]: Pon–Pet 07:00–22:00
+          - generic [ref=e356]: Sob 08:00–16:00
+          - generic [ref=e357]: Ned Nujni primeri
+      - generic [ref=e358]:
+        - heading "Storitve" [level=4] [ref=e359]
+        - list [ref=e360]:
+          - listitem [ref=e361]:
+            - link "Generalno čiščenje" [ref=e362] [cursor=pointer]:
+              - /url: "#storitve"
+          - listitem [ref=e363]:
+            - link "Redno vzdrževanje" [ref=e364] [cursor=pointer]:
+              - /url: "#storitve"
+          - listitem [ref=e365]:
+            - link "Čiščenje pisarn" [ref=e366] [cursor=pointer]:
+              - /url: "#storitve"
+          - listitem [ref=e367]:
+            - link "Čiščenje apartmajev" [ref=e368] [cursor=pointer]:
+              - /url: "#storitve"
+          - listitem [ref=e369]:
+            - link "Čiščenje stanovanj" [ref=e370] [cursor=pointer]:
+              - /url: "#storitve"
+          - listitem [ref=e371]:
+            - link "Po obrtniških delih" [ref=e372] [cursor=pointer]:
+              - /url: "#storitve"
+      - generic [ref=e373]:
+        - heading "Območje delovanja" [level=4] [ref=e374]
+        - list [ref=e375]:
+          - listitem [ref=e376]: Center & Stara Ljubljana
+          - listitem [ref=e377]: Bežigrad · Šiška
+          - listitem [ref=e378]: Vič · Rudnik
+          - listitem [ref=e379]: Moste · Polje
+          - listitem [ref=e380]: Trnovo · Krakovo
+          - listitem [ref=e381]: BTC · Črnuče
+          - listitem [ref=e382]: Domžale · Medvode · Vrhnika
+      - generic [ref=e383]:
+        - heading "Kontakt" [level=4] [ref=e384]
+        - link "040 123 456" [ref=e385] [cursor=pointer]:
+          - /url: tel:+38640123456
+        - link "info@cleanline.si" [ref=e386] [cursor=pointer]:
+          - /url: mailto:info@cleanline.si
+        - generic [ref=e387]:
+          - text: CleanLine d.o.o.
+          - text: Slovenska cesta 55
+          - text: 1000 Ljubljana
+        - link "Pridobite brezplačno ponudbo" [ref=e388] [cursor=pointer]:
+          - /url: "#kontakt"
+    - generic [ref=e390]:
+      - generic [ref=e391]: © 2026 CleanLine d.o.o. · Vse pravice pridržane
+      - generic [ref=e392]:
+        - link "Politika zasebnosti" [ref=e393] [cursor=pointer]:
+          - /url: "#"
+        - link "Splošni pogoji" [ref=e394] [cursor=pointer]:
+          - /url: "#"
+        - link "Piškotki" [ref=e395] [cursor=pointer]:
+          - /url: "#"
