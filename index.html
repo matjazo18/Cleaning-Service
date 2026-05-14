@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
 <style>
 /* =========================================================
    CleanLine Ljubljana — design tokens & global styles
@@ -142,10 +143,8 @@ button{ font:inherit; cursor:pointer; }
    NAV
    ========================================================= */
 .nav{
-  position:sticky; top:0; z-index:50;
-  background: rgba(247,248,250,.82);
-  backdrop-filter: saturate(150%) blur(14px);
-  -webkit-backdrop-filter: saturate(150%) blur(14px);
+  position:relative; z-index:50;
+  background: #ffffff;
   border-bottom:1px solid rgba(11,20,51,.06);
 }
 .nav__inner{
@@ -154,7 +153,7 @@ button{ font:inherit; cursor:pointer; }
   display:flex; align-items:center; gap:32px;
 }
 .nav__brand{ padding:0; }
-.nav__brand img{ height:38px; width:auto; }
+.nav__brand img{ height:70px; width:auto; mix-blend-mode:multiply; }
 .nav__links{
   display:flex; gap:28px;
   margin-left:auto;
@@ -180,6 +179,7 @@ button{ font:inherit; cursor:pointer; }
 .nav__cta-mobile{ display:none; }
 
 @media (max-width: 880px){
+  .nav{ position:sticky; top:0; }
   .nav__links{ display:none; }
   .nav__phone{ display:none; }
   .nav__cta .btn--primary:not(.nav__cta-mobile){ display:none; }
@@ -908,7 +908,7 @@ button{ font:inherit; cursor:pointer; }
   gap: 40px;
   padding: 80px 28px 60px;
 }
-.footer__logo{ height:48px; width:auto; background:#fff; padding:8px 14px; border-radius:10px; }
+.footer__logo{ height:80px; width:auto; padding:0 14px; mix-blend-mode:multiply; }
 .footer__tag{
   margin: 22px 0 22px; max-width: 320px;
   font-size:14.5px; line-height:1.6;
@@ -977,7 +977,7 @@ button{ font:inherit; cursor:pointer; }
 <header class="nav">
   <div class="nav__inner">
     <a href="#" class="nav__brand" aria-label="CleanLine Ljubljana">
-      <img src="assets/cleanline-logo.png" alt="CleanLine Ljubljana" />
+      <img src="assets/logo.jpg" alt="CleanLine Ljubljana" />
     </a>
     <nav class="nav__links" aria-label="Glavni meni">
       <a href="#storitve">Storitve</a>
@@ -1017,7 +1017,8 @@ button{ font:inherit; cursor:pointer; }
         Pisarne, apartmaji in domovi <br/>
         <span class="hero__title-accent">v brezhibni čistoči</span>
       </h1>
-      <p class="hero__sub">Za naročnike v Ljubljani, ki pričakujejo brezhibno čistočo, urejen videz prostorov in ekipo, ki dela tiho, natančno in vedno ob dogovorjenem času.</p>
+      <p class="hero__sub">Za stranke, ki pričakujejo brezhibno čistočo, urejen videz prostorov in ekipo, ki dela tiho,
+natančno in vedno ob dogovorjenem času.</p>
 
       <div class="hero__ctas">
         <a href="tel:+38630254747" class="btn btn--primary btn--lg">
@@ -1033,7 +1034,6 @@ button{ font:inherit; cursor:pointer; }
       <ul class="hero__assurances">
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#39D6E8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Fiksna cena pred izvedbo</li>
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#39D6E8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Lastna ekipa, brez podizvajalcev</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#39D6E8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Zavarovana odgovornost</li>
       </ul>
     </div>
 
@@ -1067,18 +1067,34 @@ button{ font:inherit; cursor:pointer; }
 
   <div class="hero__marquee" aria-hidden="true">
     <div class="hero__marquee-track">
-      <span>Pisarniški kompleksi</span><span class="dot">·</span>
-      <span>Kratkoročni najem</span><span class="dot">·</span>
-      <span>Družinski domovi</span><span class="dot">·</span>
-      <span>Coworking prostori</span><span class="dot">·</span>
-      <span>Apartmaji v centru</span><span class="dot">·</span>
-      <span>Zasebne ordinacije</span><span class="dot">·</span>
-      <span>Pisarniški kompleksi</span><span class="dot">·</span>
-      <span>Kratkoročni najem</span><span class="dot">·</span>
-      <span>Družinski domovi</span><span class="dot">·</span>
-      <span>Coworking prostori</span><span class="dot">·</span>
-      <span>Apartmaji v centru</span><span class="dot">·</span>
-      <span>Zasebne ordinacije</span><span class="dot">·</span>
+      <span>APARTMAJI</span><span class="dot">·</span>
+      <span>AIRBNB</span><span class="dot">·</span>
+      <span>PISARNE</span><span class="dot">·</span>
+      <span>GENERALNA ČIŠČENJA</span><span class="dot">·</span>
+      <span>ČIŠČENJE DOMOV</span><span class="dot">·</span>
+      <span>ČIŠČENJE ORDINACIJ</span><span class="dot">·</span>
+      <span>ČIŠČENJE OKEN</span><span class="dot">·</span>
+      <span>APARTMAJI</span><span class="dot">·</span>
+      <span>AIRBNB</span><span class="dot">·</span>
+      <span>PISARNE</span><span class="dot">·</span>
+      <span>GENERALNA ČIŠČENJA</span><span class="dot">·</span>
+      <span>ČIŠČENJE DOMOV</span><span class="dot">·</span>
+      <span>ČIŠČENJE ORDINACIJ</span><span class="dot">·</span>
+      <span>ČIŠČENJE OKEN</span><span class="dot">·</span>
+      <span>APARTMAJI</span><span class="dot">·</span>
+      <span>AIRBNB</span><span class="dot">·</span>
+      <span>PISARNE</span><span class="dot">·</span>
+      <span>GENERALNA ČIŠČENJA</span><span class="dot">·</span>
+      <span>ČIŠČENJE DOMOV</span><span class="dot">·</span>
+      <span>ČIŠČENJE ORDINACIJ</span><span class="dot">·</span>
+      <span>ČIŠČENJE OKEN</span><span class="dot">·</span>
+      <span>APARTMAJI</span><span class="dot">·</span>
+      <span>AIRBNB</span><span class="dot">·</span>
+      <span>PISARNE</span><span class="dot">·</span>
+      <span>GENERALNA ČIŠČENJA</span><span class="dot">·</span>
+      <span>ČIŠČENJE DOMOV</span><span class="dot">·</span>
+      <span>ČIŠČENJE ORDINACIJ</span><span class="dot">·</span>
+      <span>ČIŠČENJE OKEN</span><span class="dot">·</span>
     </div>
   </div>
 </section>
@@ -1436,7 +1452,7 @@ button{ font:inherit; cursor:pointer; }
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <img src="assets/cleanline-logo.png" alt="CleanLine Ljubljana" class="footer__logo" />
+      <img src="assets/logo.jpg" alt="CleanLine Ljubljana" class="footer__logo" />
       <p class="footer__tag">Profesionalna čistoča za pisarne, apartmaje in domove v Ljubljani in okolici.</p>
       <div class="footer__hours">
         <div class="footer__hours-label">Delovni čas</div>
