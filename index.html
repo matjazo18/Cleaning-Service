@@ -5,10 +5,107 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CleanLine Ljubljana — Profesionalna čistoča za pisarne, apartmaje in domove</title>
 <meta name="description" content="CleanLine Ljubljana — premium čistilni servis za pisarne, apartmaje in stanovanja v Ljubljani in okolici. Zanesljivo, diskretno, profesionalno." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.cleanlineljubljana.si/" />
+<meta property="og:title" content="CleanLine Ljubljana — Profesionalna čistoča za pisarne, apartmaje in domove" />
+<meta property="og:description" content="Premium čistilni servis za pisarne, apartmaje in stanovanja v Ljubljani in okolici. Zanesljivo, diskretno, profesionalno." />
+<meta property="og:image" content="https://www.cleanlineljubljana.si/assets/hero-room.png" />
+<meta property="og:locale" content="sl_SI" />
+<meta property="og:site_name" content="CleanLine Ljubljana" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="CleanLine Ljubljana — Profesionalna čistoča za pisarne, apartmaje in domove" />
+<meta name="twitter:description" content="Premium čistilni servis za pisarne, apartmaje in stanovanja v Ljubljani in okolici." />
+<meta name="twitter:image" content="https://www.cleanlineljubljana.si/assets/hero-room.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet" />
 <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ali lahko pride do dodatnih stroškov?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ne. Cena je dogovorjena vnaprej in se brez vašega soglasja ne spreminja."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Čistite tudi zvečer ali med vikendi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Da. Termine prilagodimo vašim željam in urniku."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ali uporabljate svoja čistila in opremo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vedno. Ekipa pride z lastno profesionalno opremo in sredstvi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kako poskrbite za varnost ključev?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ključe in dostop obravnavamo po internem varnostnem protokolu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ali prostor vedno čisti ista ekipa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pri rednih obiskih praviloma pošiljamo isto ekipo."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "CleanLine Ljubljana",
+  "description": "Premium čistilni servis za pisarne, apartmaje in stanovanja v Ljubljani in okolici. Zanesljivo, diskretno, profesionalno.",
+  "url": "https://www.cleanlineljubljana.si",
+  "telephone": "+38630254747",
+  "email": "cleanlineljubljana@gmail.com",
+  "image": "https://www.cleanlineljubljana.si/assets/hero-room.png",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kermaunerjeva ulica 13",
+    "addressLocality": "Ljubljana",
+    "postalCode": "1000",
+    "addressCountry": "SI"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Ljubljana"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "16:00"
+    }
+  ]
+}
+</script>
 <style>
 /* =========================================================
    CleanLine Ljubljana — design tokens & global styles
@@ -1017,7 +1114,7 @@ button{ font:inherit; cursor:pointer; }
 .footer__mail:hover{ color: var(--cyan-500); }
 .footer__col address{
   font-style:normal; font-size:14px; color: rgba(255,255,255,0.55);
-  margin: 14px 0;
+  display:flex; flex-direction:column; gap:8px; margin:0;
 }
 .footer__cta{ margin-top: 10px; align-self:flex-start; }
 
@@ -1112,7 +1209,7 @@ natančno in vedno ob dogovorjenem času.</p>
 
     <div class="hero__visual">
       <div class="hero__photo" role="img" aria-label="Fotografija profesionalno očiščenega prostora">
-        <img src="assets/hero-room.png" alt="Profesionalno očiščena pisarna" />
+        <img src="assets/hero-room.png" alt="Profesionalno očiščena pisarna" fetchpriority="high" />
         <div class="hero__photo-shine"></div>
       </div>
       <div class="hero__floatcard hero__floatcard--top">
@@ -1177,7 +1274,7 @@ natančno in vedno ob dogovorjenem času.</p>
   <div class="container">
     <header class="section-head">
       <span class="section-eyebrow">Storitve</span>
-      <h2 class="section-title">Eno podjetje. <em>Vsa čiščenja</em>, ki jih potrebujete.</h2>
+      <h2 class="section-title">Čiščenje pisarn, apartmajev in domov <em>v Ljubljani in okolici</em>.</h2>
       <p class="section-lede">Od enkratnega generalnega čiščenja do tedenskega vzdrževanja pisarne — vsako storitev opravi naša stalna ekipa po preverjenem protokolu in s profesionalno opremo.</p>
     </header>
 
@@ -1405,35 +1502,35 @@ natančno in vedno ob dogovorjenem času.</p>
         <div class="autoscroll__track">
           <!-- set 1 -->
           <div class="autoscroll__item">
-            <img class="autoscroll__img" src="assets/563352084.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <img class="autoscroll__img" loading="lazy" src="assets/563352084.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" src="assets/563352348.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <img class="autoscroll__img" loading="lazy" src="assets/563352348.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" src="assets/563352561.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <img class="autoscroll__img" loading="lazy" src="assets/563352561.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" src="assets/563353069.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <img class="autoscroll__img" loading="lazy" src="assets/563353069.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" src="assets/563353318.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <img class="autoscroll__img" loading="lazy" src="assets/563353318.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
           </div>
           <!-- set 2 — duplicate for seamless loop -->
           <div class="autoscroll__item">
-            <img class="autoscroll__img" src="assets/563352084.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <img class="autoscroll__img" loading="lazy" src="assets/563352084.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" src="assets/563352348.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <img class="autoscroll__img" loading="lazy" src="assets/563352348.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" src="assets/563352561.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <img class="autoscroll__img" loading="lazy" src="assets/563352561.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" src="assets/563353069.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <img class="autoscroll__img" loading="lazy" src="assets/563353069.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" src="assets/563353318.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <img class="autoscroll__img" loading="lazy" src="assets/563353318.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
           </div>
         </div>
       </div>
@@ -1464,7 +1561,7 @@ natančno in vedno ob dogovorjenem času.</p>
   <div class="container faq__container">
     <header class="section-head">
       <span class="section-eyebrow">Pogosta vprašanja</span>
-      <h2 class="section-title">Vprašanja, ki jih <em>dobimo najpogosteje</em>.</h2>
+      <h2 class="section-title">Pogosta vprašanja <em>o čiščenju v Ljubljani</em>.</h2>
     </header>
 
     <div class="faq__list">
@@ -1526,7 +1623,7 @@ natančno in vedno ob dogovorjenem času.</p>
   <div class="container finalcta__inner">
     <div class="finalcta__text">
       <span class="section-eyebrow">Naslednji korak</span>
-      <h2 class="finalcta__title">Prvi termin in okvirno ceno prejmete <em>še danes</em>.</h2>
+      <h2 class="finalcta__title">Naroči čiščenje v Ljubljani — termin in ceno prejmete <em>še danes</em>.</h2>
       <p class="finalcta__sub">Jasen odgovor, okvirna cena in prvi možni termini.</p>
     </div>
     <form class="finalcta__form" id="contact-form">
@@ -1555,7 +1652,7 @@ natančno in vedno ob dogovorjenem času.</p>
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <img src="assets/logo.jpg" alt="CleanLine Ljubljana" class="footer__logo" />
+      <img src="assets/logo.jpg" alt="CleanLine Ljubljana" class="footer__logo" loading="lazy" />
       <p class="footer__tag">Profesionalna čistoča za pisarne, apartmaje in domove v Ljubljani in okolici.</p>
       <div class="footer__hours">
         <div class="footer__hours-label">Delovni čas</div>
@@ -1594,12 +1691,12 @@ natančno in vedno ob dogovorjenem času.</p>
 
     <div class="footer__col footer__col--contact">
       <h4>Kontakt</h4>
-      <a href="tel:+38630254747" class="footer__phone">030 254 747</a>
-      <a href="mailto:cleanlineljubljana@gmail.com" class="footer__mail">cleanlineljubljana@gmail.com</a>
       <address>
-        CleanLine Ljubljana<br/>
+        <a href="tel:+38630254747" class="footer__phone">030 254 747</a>
+        <a href="mailto:cleanlineljubljana@gmail.com" class="footer__mail">cleanlineljubljana@gmail.com</a>
+        <span>CleanLine Ljubljana<br/>
         Kermaunerjeva ulica 13<br/>
-        1000 Ljubljana
+        1000 Ljubljana</span>
       </address>
     </div>
   </div>
