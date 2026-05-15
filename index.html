@@ -622,6 +622,77 @@ button{ font:inherit; cursor:pointer; }
 }
 
 /* =========================================================
+   AUTO-SCROLL GALLERY
+   ========================================================= */
+@keyframes autoscroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.autoscroll{
+  margin-bottom:56px;
+  background: #08101E;
+  border-radius: var(--radius-xl);
+  padding: 52px 0;
+}
+.autoscroll__mask{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+}
+.autoscroll__mask::before,
+.autoscroll__mask::after{
+  content:""; position:absolute; top:0; bottom:0; width:140px; z-index:2; pointer-events:none;
+}
+.autoscroll__mask::before{ left:0;  background: linear-gradient(to right, #08101E, transparent); }
+.autoscroll__mask::after { right:0; background: linear-gradient(to left,  #08101E, transparent); }
+.autoscroll__track{
+  display:flex; flex-direction:row; flex-wrap:nowrap; align-items:flex-start;
+  gap:20px; width:max-content;
+  animation: autoscroll 26s linear infinite;
+}
+.autoscroll__track:hover{ animation-play-state: paused; }
+.autoscroll__item{ flex:0 0 320px; width:320px; }
+.autoscroll__img{
+  width:320px; height:420px;
+  object-fit:cover; border-radius:20px; display:block;
+}
+.autoscroll__label{
+  margin:20px 0 0; padding: 0 28px;
+  font-size:13px; font-style:italic;
+  color: rgba(255,255,255,0.45);
+  text-align:center; letter-spacing:0.02em;
+}
+
+@media (max-width: 700px){
+  .autoscroll__item{ flex:0 0 220px; width:220px; }
+  .autoscroll__img{ width:220px; height:280px; }
+}
+
+/* =========================================================
+   TESTIMONIAL STRIP
+   ========================================================= */
+.tstrip{ background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:40px 0; }
+.tstrip__inner{ display:flex; align-items:center; gap:28px; max-width:860px; }
+.tstrip__mark{
+  font-family: var(--ff-serif); font-size:56px; line-height:0.8;
+  color: var(--cyan-500); opacity:0.55; flex-shrink:0; user-select:none;
+}
+.tstrip__text{ flex:1; font-size:17px; font-style:italic; color: var(--ink-700); line-height:1.55; margin:0; }
+.tstrip__by{
+  flex-shrink:0; text-align:right;
+  display:flex; flex-direction:column; gap:2px;
+  padding-left:24px; border-left:2px solid var(--line);
+}
+.tstrip__name{ font-weight:600; font-size:14px; color: var(--ink-900); }
+.tstrip__role{ font-size:13px; color: var(--ink-500); }
+
+@media (max-width: 700px){
+  .tstrip__inner{ flex-direction:column; text-align:center; gap:16px; }
+  .tstrip__by{ border-left:none; border-top:1px solid var(--line); padding:14px 0 0; text-align:center; width:100%; }
+  .tstrip__mark{ display:none; }
+}
+
+/* =========================================================
    RESULTS / SOCIAL PROOF
    ========================================================= */
 .results{ padding: 110px 0; background: var(--bg-2); }
@@ -1171,6 +1242,20 @@ natančno in vedno ob dogovorjenem času.</p>
   </div>
 </section>
 
+<!-- testimonial strip -->
+<div class="tstrip">
+  <div class="container">
+    <div class="tstrip__inner">
+      <span class="tstrip__mark" aria-hidden="true">"</span>
+      <p class="tstrip__text">Gostje prihajajo v brezhibno pripravljen apartma – brez mojega usklajevanja.</p>
+      <div class="tstrip__by">
+        <span class="tstrip__name">Maja P.</span>
+        <span class="tstrip__role">Lastnica apartmaja, Bežigrad</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ============ WHY CLEANLINE ============ -->
 <section class="why" id="zakaj">
   <div class="why__bg" aria-hidden="true">
@@ -1237,6 +1322,20 @@ natančno in vedno ob dogovorjenem času.</p>
   </div>
 </section>
 
+<!-- testimonial strip -->
+<div class="tstrip">
+  <div class="container">
+    <div class="tstrip__inner">
+      <span class="tstrip__mark" aria-hidden="true">"</span>
+      <p class="tstrip__text">Ekipa pride po delovnem času, prostor pa je zjutraj brezhiben.</p>
+      <div class="tstrip__by">
+        <span class="tstrip__name">Aleš K.</span>
+        <span class="tstrip__role">Vodja pisarne, BTC</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ============ PROCESS ============ -->
 <section class="process" id="postopek">
   <div class="container">
@@ -1277,6 +1376,20 @@ natančno in vedno ob dogovorjenem času.</p>
   </div>
 </section>
 
+<!-- testimonial strip -->
+<div class="tstrip">
+  <div class="container">
+    <div class="tstrip__inner">
+      <span class="tstrip__mark" aria-hidden="true">"</span>
+      <p class="tstrip__text">Stanovanje je bilo pripravljeno za vselitev že po prvem čiščenju.</p>
+      <div class="tstrip__by">
+        <span class="tstrip__name">Nina &amp; Žan</span>
+        <span class="tstrip__role">Družinski dom, Šiška</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ============ RESULTS / SOCIAL PROOF ============ -->
 <section class="results" id="reference">
   <div class="container">
@@ -1285,49 +1398,44 @@ natančno in vedno ob dogovorjenem času.</p>
       <h2 class="section-title">Prostori, ki jih čistimo. <em>Ljudje, ki nas priporočajo.</em></h2>
     </header>
 
-    <div class="results__layout">
-      <div class="ba">
-        <div class="ba__label">Pred &amp; po &middot; <span>vstavite par fotografij — isti kot, ista ura dneva</span></div>
-        <div class="ba__split">
-          <div class="ba__side ba__side--before">
-            <img class="ba__bg" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=600&q=80" alt="Pisarna pred čiščenjem" />
-            <span class="ba__chip ba__chip--before">PRED</span>
+    <div class="autoscroll">
+      <div class="autoscroll__mask">
+        <div class="autoscroll__track">
+          <!-- set 1 -->
+          <div class="autoscroll__item">
+            <img class="autoscroll__img" src="assets/563352084.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
           </div>
-          <div class="ba__side ba__side--after">
-            <img class="ba__bg" src="https://images.unsplash.com/photo-1718220216044-006f43e3a9b1?auto=format&fit=crop&w=600&q=80" alt="Pisarna po čiščenju CleanLine" />
-            <span class="ba__chip ba__chip--after">PO</span>
+          <div class="autoscroll__item">
+            <img class="autoscroll__img" src="assets/563352348.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
           </div>
-          <div class="ba__divider" aria-hidden="true">
-            <span class="ba__handle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-4 6 4 6M16 6l4 6-4 6"/></svg>
-            </span>
+          <div class="autoscroll__item">
+            <img class="autoscroll__img" src="assets/563352561.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+          </div>
+          <div class="autoscroll__item">
+            <img class="autoscroll__img" src="assets/563353069.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+          </div>
+          <div class="autoscroll__item">
+            <img class="autoscroll__img" src="assets/563353318.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+          </div>
+          <!-- set 2 — duplicate for seamless loop -->
+          <div class="autoscroll__item">
+            <img class="autoscroll__img" src="assets/563352084.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+          </div>
+          <div class="autoscroll__item">
+            <img class="autoscroll__img" src="assets/563352348.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+          </div>
+          <div class="autoscroll__item">
+            <img class="autoscroll__img" src="assets/563352561.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+          </div>
+          <div class="autoscroll__item">
+            <img class="autoscroll__img" src="assets/563353069.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+          </div>
+          <div class="autoscroll__item">
+            <img class="autoscroll__img" src="assets/563353318.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
           </div>
         </div>
       </div>
-
-      <div class="quotes">
-        <figure class="quote">
-          <div class="quote__mark" aria-hidden="true">“</div>
-          <blockquote>Gostje prihajajo v brezhibno pripravljen apartma – brez mojega usklajevanja.</blockquote>
-          <figcaption>
-            <strong>Maja P.</strong><span>Lastnica apartmaja, Bežigrad</span>
-          </figcaption>
-        </figure>
-        <figure class="quote">
-          <div class="quote__mark" aria-hidden="true">“</div>
-          <blockquote>Ekipa pride po delovnem času, prostor pa je zjutraj brezhiben.</blockquote>
-          <figcaption>
-            <strong>Aleš K.</strong><span>Vodja pisarne, BTC</span>
-          </figcaption>
-        </figure>
-        <figure class="quote">
-          <div class="quote__mark" aria-hidden="true">“</div>
-          <blockquote>Stanovanje je bilo pripravljeno za vselitev že po prvem čiščenju.</blockquote>
-          <figcaption>
-            <strong>Nina &amp; Žan</strong><span>Družinski dom, Šiška</span>
-          </figcaption>
-        </figure>
-      </div>
+      <p class="autoscroll__label">Residence Black&amp;White_, Ljubljana Bežigrad</p>
     </div>
 
     <div class="trust">
@@ -1551,6 +1659,7 @@ document.querySelectorAll('.qa').forEach(function(details) {
     }
   });
 });
+
 </script>
 </body>
 </html>
