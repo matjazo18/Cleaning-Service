@@ -753,11 +753,10 @@ button{ font:inherit; cursor:pointer; }
   width:320px; height:420px;
   object-fit:cover; border-radius:20px; display:block;
 }
-.autoscroll__label{
-  margin:20px 0 0; padding: 0 28px;
-  font-size:13px; font-style:italic;
+.autoscroll__caption{
+  margin:12px 0 0; font-size:12.5px;
   color: rgba(255,255,255,0.45);
-  text-align:center; letter-spacing:0.02em;
+  text-align:center; font-style:italic;
 }
 
 @media (max-width: 700px){
@@ -789,6 +788,31 @@ button{ font:inherit; cursor:pointer; }
   .tstrip__inner{ flex-direction:column; text-align:center; gap:16px; }
   .tstrip__by{ border-left:none; border-top:1px solid var(--line); padding:14px 0 0; text-align:center; width:100%; }
   .tstrip__mark{ display:none; }
+}
+
+.testimonials{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin:48px 0 56px;
+}
+.testimonials .tstrip__inner{
+  max-width:none;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:12px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px 24px;
+}
+.testimonials .tstrip__by{
+  border-left:none;
+  padding-left:0;
+  text-align:left;
+}
+@media(max-width:980px){
+  .testimonials{ grid-template-columns:1fr; }
 }
 
 /* =========================================================
@@ -1341,19 +1365,6 @@ natančno in vedno ob dogovorjenem času.</p>
   </div>
 </section>
 
-<!-- testimonial strip -->
-<div class="tstrip">
-  <div class="container">
-    <div class="tstrip__inner">
-      <span class="tstrip__mark" aria-hidden="true">"</span>
-      <p class="tstrip__text">Gostje prihajajo v brezhibno pripravljen apartma – brez mojega usklajevanja.</p>
-      <div class="tstrip__by">
-        <span class="tstrip__name">Maja P.</span>
-        <span class="tstrip__role">Lastnica apartmaja, Bežigrad</span>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ============ WHY CLEANLINE ============ -->
 <section class="why" id="zakaj">
@@ -1421,19 +1432,6 @@ natančno in vedno ob dogovorjenem času.</p>
   </div>
 </section>
 
-<!-- testimonial strip -->
-<div class="tstrip">
-  <div class="container">
-    <div class="tstrip__inner">
-      <span class="tstrip__mark" aria-hidden="true">"</span>
-      <p class="tstrip__text">Ekipa pride po delovnem času, prostor pa je zjutraj brezhiben.</p>
-      <div class="tstrip__by">
-        <span class="tstrip__name">Aleš K.</span>
-        <span class="tstrip__role">Vodja pisarne, BTC</span>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ============ PROCESS ============ -->
 <section class="process" id="postopek">
@@ -1475,19 +1473,6 @@ natančno in vedno ob dogovorjenem času.</p>
   </div>
 </section>
 
-<!-- testimonial strip -->
-<div class="tstrip">
-  <div class="container">
-    <div class="tstrip__inner">
-      <span class="tstrip__mark" aria-hidden="true">"</span>
-      <p class="tstrip__text">Stanovanje je bilo pripravljeno za vselitev že po prvem čiščenju.</p>
-      <div class="tstrip__by">
-        <span class="tstrip__name">Nina &amp; Žan</span>
-        <span class="tstrip__role">Družinski dom, Šiška</span>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ============ RESULTS / SOCIAL PROOF ============ -->
 <section class="results" id="reference">
@@ -1502,39 +1487,75 @@ natančno in vedno ob dogovorjenem času.</p>
         <div class="autoscroll__track">
           <!-- set 1 -->
           <div class="autoscroll__item">
-            <img class="autoscroll__img" loading="lazy" src="assets/563352084.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
+            <img class="autoscroll__img" src="assets/563352084.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <p class="autoscroll__caption">Residence Black&amp;White_, Ljubljana Bežigrad</p>
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" loading="lazy" src="assets/563352348.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
+            <img class="autoscroll__img" src="assets/563352348.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <p class="autoscroll__caption">Airbnb apartma, Ljubljana Center</p>
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" loading="lazy" src="assets/563352561.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
+            <img class="autoscroll__img" src="assets/563352561.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <p class="autoscroll__caption">Zasebno stanovanje, Ljubljana Šiška</p>
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" loading="lazy" src="assets/563353069.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
+            <img class="autoscroll__img" src="assets/563353069.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <p class="autoscroll__caption">Zasebni dom, Ljubljana BTC</p>
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" loading="lazy" src="assets/563353318.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
+            <img class="autoscroll__img" src="assets/563353318.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <p class="autoscroll__caption">Zasebni dom, Ljubljana Vič</p>
           </div>
           <!-- set 2 — duplicate for seamless loop -->
           <div class="autoscroll__item">
-            <img class="autoscroll__img" loading="lazy" src="assets/563352084.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
+            <img class="autoscroll__img" src="assets/563352084.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <p class="autoscroll__caption">Residence Black&amp;White_, Ljubljana Bežigrad</p>
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" loading="lazy" src="assets/563352348.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
+            <img class="autoscroll__img" src="assets/563352348.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <p class="autoscroll__caption">Airbnb apartma, Ljubljana Center</p>
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" loading="lazy" src="assets/563352561.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
+            <img class="autoscroll__img" src="assets/563352561.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <p class="autoscroll__caption">Zasebno stanovanje, Ljubljana Šiška</p>
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" loading="lazy" src="assets/563353069.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
+            <img class="autoscroll__img" src="assets/563353069.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <p class="autoscroll__caption">Zasebni dom, Ljubljana BTC</p>
           </div>
           <div class="autoscroll__item">
-            <img class="autoscroll__img" loading="lazy" src="assets/563353318.jpg" alt="Profesionalno čiščenje apartmajev v Ljubljani — Residence Black&amp;White, Bežigrad" />
+            <img class="autoscroll__img" src="assets/563353318.jpg" alt="Residence Black&amp;White_, Ljubljana Bežigrad" />
+            <p class="autoscroll__caption">Zasebni dom, Ljubljana Vič</p>
           </div>
         </div>
       </div>
-      <p class="autoscroll__label">Residence Black&amp;White_, Ljubljana Bežigrad</p>
+    </div>
+
+    <div class="testimonials">
+      <div class="tstrip__inner">
+        <span class="tstrip__mark" aria-hidden="true">"</span>
+        <p class="tstrip__text">Gostje prihajajo v brezhibno pripravljen apartma – brez mojega usklajevanja.</p>
+        <div class="tstrip__by">
+          <span class="tstrip__name">Maja P.</span>
+          <span class="tstrip__role">Lastnica apartmaja, Bežigrad</span>
+        </div>
+      </div>
+      <div class="tstrip__inner">
+        <span class="tstrip__mark" aria-hidden="true">"</span>
+        <p class="tstrip__text">Ekipa pride po delovnem času, prostor pa je zjutraj brezhiben.</p>
+        <div class="tstrip__by">
+          <span class="tstrip__name">Aleš K.</span>
+          <span class="tstrip__role">Vodja pisarne, BTC</span>
+        </div>
+      </div>
+      <div class="tstrip__inner">
+        <span class="tstrip__mark" aria-hidden="true">"</span>
+        <p class="tstrip__text">Stanovanje je bilo pripravljeno za vselitev že po prvem čiščenju.</p>
+        <div class="tstrip__by">
+          <span class="tstrip__name">Nina &amp; Žan</span>
+          <span class="tstrip__role">Družinski dom, Šiška</span>
+        </div>
+      </div>
     </div>
 
     <div class="trust">
